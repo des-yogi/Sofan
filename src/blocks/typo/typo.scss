@@ -1,0 +1,370 @@
+/* roboto-300 - latin_cyrillic */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'),
+       url('../fonts/roboto-v20-latin_cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v20-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-500 - latin_cyrillic */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+       url('../fonts/roboto-v20-latin_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v20-latin_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700 - latin_cyrillic */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+       url('../fonts/roboto-v20-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v20-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+body {
+  // ТОЛЬКО типографика!
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: 400;
+  line-height: $line-height;
+  word-break: break-word;
+  text-align: left;
+  color: $text-color;
+  background-color: $body-bg;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (min-width: $screen-xl) {
+    font-size: $font-size * 1.125;
+  }
+
+  // text-rendering: optimizeLegibility;
+  // Partial support in Android browser versions is due to a serious bug where text-rendering: optimizeLegibility causes custom web fonts to not render!!!
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // margin-top: 1em;
+  margin-bottom: 10px;
+  font-family: $font-family;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $title-color;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 20px;
+  }
+}
+
+
+.h1,
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: $font-size--h1;
+  font-weight: 700;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size--h1 * 1.333;
+    //line-height: 44px;
+  }
+
+  @media (min-width: $screen-xl) {
+    //margin-bottom: 50px;
+    font-size: $font-size--h1 * 2;
+    //line-height: 50px;
+  }
+}
+
+.h2,
+h2 {
+  //margin-top: 22px;
+  //margin-bottom: 22px;
+  font-size: $font-size--h2;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size--h2 * 1.21;
+    //line-height: 44px;
+  }
+
+  @media (min-width: $screen-xl) {
+    //margin-top: 25px;
+    //margin-bottom: 25px;
+    font-size: $font-size--h2 * 1.685;
+    //line-height: 50px;
+  }
+}
+
+.h3,
+h3 {
+  //margin-top: 22px;
+  //margin-bottom: 22px;
+  font-size: $font-size--h3;
+  //font-weight: 500;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size--h3 * 1.056;
+  }
+
+  @media (min-width: $screen-xl) {
+    //margin-top: 25px;
+    //margin-bottom: 25px;
+    font-size: $font-size--h3 * 1.33;
+    //line-height: 25px;
+  }
+}
+
+.h4,
+h4 {
+  //margin-top: 22px;
+  margin-bottom: 0;
+  font-size: $font-size--h4;
+  //font-weight: 500;
+
+  @media (min-width: $screen-xl) {
+    //margin-top: 25px;
+    font-size: $font-size--h4 * 1.125;
+  }
+}
+
+.h5,
+.h6,
+h5,
+h6 {
+  //margin-top: 22px;
+  margin-bottom: 0;
+  font-size: $font-size--h5;
+  //font-weight: 500;
+
+  @media (min-width: $screen-xl) {
+    //margin-top: 25px;
+    font-size: $font-size--h5 * 1.125;
+  }
+}
+
+div,
+section,
+article {
+
+  *:first-child {
+    margin-top: 0;
+  }
+}
+
+.p,
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+address,
+figure {
+  //margin-top: 0.5em;
+  margin-bottom: 1em;
+  color: currentColor;
+
+  & + & {
+    margin-top: 1em;
+  }
+
+  &:first-of-type {
+    //margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+address {
+  font-style: normal;
+}
+
+ul,
+ol {
+  padding-left: 1.3em;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li {
+  line-height: inherit;
+}
+
+hr {
+  box-sizing: content-box; // Проблема Firefox
+  height: 0;               // Проблема Firefox
+  overflow: visible;       // Проблема Edge и IE
+  margin-top: 1.375em;
+  margin-bottom: 1.375em;
+  border: 0;
+  border-top: 1px solid $text-color;
+}
+
+.small,
+small {
+  font-size: $font-size * 0.875;
+}
+
+sub,
+sup {
+  font-size: 70%;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+blockquote {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+
+  @media (min-width: $screen-sm) {
+    margin-left: 1.5rem;
+  }
+
+  & + dt {
+    margin-top: 0.5em;
+  }
+}
+
+// samp,
+code,
+kbd,
+pre {
+  // font-family: $font-family--monospace;
+}
+
+code {
+  padding: 0.06em 0.3em;
+  color: $text-color;
+  background-color: rgba(#000, 0.08);
+  border-radius: $border-radius;
+}
+
+kbd {
+  padding: 0.06em 0.3em;
+  color: $text-color;
+  background-color: $gray-lightest;
+  border-radius: $border-radius;
+
+  kbd {
+    padding: 0;
+  }
+}
+
+pre {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5em;
+  overflow-x: auto;
+  tab-size: 2;
+  background-color: rgba(#000, 0.08);
+
+  code {
+    background: transparent;
+  }
+}
+
+ul {
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 26px;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: calc(#{$line-height} / 2);
+      transform: translateY(-4px);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: currentColor;
+
+      @media (min-width: $screen-xl) {
+        transform: translateY(-3px);
+      }
+    }
+
+    ul li::before {
+      border-radius: 0;
+    }
+  }
+}
+
+/* ol{
+  counter-reset: myCounter;
+
+  li:before {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 0.7em;
+    counter-increment: myCounter;
+    content: counter(myCounter)".";
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    text-align: left;
+    line-height: inherit;
+    color: $second-color;
+  }
+}
+ */

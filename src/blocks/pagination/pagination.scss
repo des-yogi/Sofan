@@ -1,0 +1,51 @@
+$line-height:                 1.375em !default;
+
+$text-color:                  hsl(0, 0%, 10%) !default;
+
+$border-color:                hsl(0, 0%, 60%) !default;
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 25px 0 50px;
+
+  @media (min-width: $screen-md) {
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 45px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li + li {
+      margin-left: 13px;
+
+      @media (min-width: $screen-md) {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &__item {
+
+    &.active {
+
+      a {
+        color: $white;
+        background-color: $main-color;
+        pointer-events: none;
+      }
+    }
+  }
+}
