@@ -1,24 +1,13 @@
 .socials {
   display: flex;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   align-items: center;
-
-  @media (min-width: $screen-md) {
-    justify-content: center;
-  }
-
-  @media (min-width: $screen-xl) {
-    justify-content: space-between;
-  }
 
   $block-name:                &; // #{$block-name}__element
 
   &__item {
+    padding-left: 0;
     margin-right: 25px;
-
-    @media (min-width: $screen-xl) {
-
-    }
 
     &:last-child {
       margin-right: 0;
@@ -27,13 +16,13 @@
 
   &__link {
     display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    color: $white;
+    width: 24px;
+    height: 24px;
+    //border-radius: 50%;
+    color: $main-color;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: $icon-bg;
+    background-color: transparent;
 
     @media (min-width: $screen-md) {
       //width: 50px;
@@ -45,33 +34,63 @@
       background-color: $white;
     }
 
-    &--fb {
-      background-size: 10px 20px;
-      background-image: svg-load('../blocks/socials/bg-img/facebook-icon.svg', fill=$white);
+    &--mess {
+      background-size: contain;
+      background-image: svg-load('../blocks/socials/bg-img/messenger-icon.svg', fill=$link-color);
 
       &:hover,
       &:focus {
-        background-image: svg-load('../blocks/socials/bg-img/facebook-icon.svg', fill=$icon-bg);
+        background-image: svg-load('../blocks/socials/bg-img/messenger-icon.svg', fill=$link-color--hover);
       }
     }
 
-    &--tw {
-      background-size: 18px 15px;
-      background-image: svg-load('../blocks/socials/bg-img/twitter-icon.svg', fill=$white);
+    &--fb {
+      background-size: contain;
+      background-image: svg-load('../blocks/socials/bg-img/facebook-icon.svg', fill=$link-color);
 
       &:hover,
       &:focus {
-        background-image: svg-load('../blocks/socials/bg-img/twitter-icon.svg', fill=$icon-bg);
+        background-image: svg-load('../blocks/socials/bg-img/facebook-icon.svg', fill=$link-color--hover);
+      }
+    }
+
+    &--tg {
+      background-size: contain;
+      background-image: svg-load('../blocks/socials/bg-img/telegram-icon.svg', fill=$link-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/socials/bg-img/telegram-icon.svg', fill=$link-color--hover);
+      }
+    }
+
+    &--wapp {
+      background-size: contain;
+      background-image: svg-load('../blocks/socials/bg-img/whatsapp-icon.svg', fill=$link-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/socials/bg-img/whatsapp-icon.svg', fill=$link-color--hover);
+      }
+    }
+
+    &--vib {
+      background-size: contain;
+      background-image: svg-load('../blocks/socials/bg-img/viber-icon.svg', fill=$link-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/socials/bg-img/viber-icon.svg', fill=$link-color--hover);
       }
     }
 
     &--insta {
-      background-size: 16px 16px;
-      background-image: svg-load('../blocks/socials/bg-img/instagram-icon.svg', fill=$white);
+      background-size: contain;
+      background-image: svg-load('../blocks/socials/bg-img/instagram-icon.svg', fill=$link-color);
 
       &:hover,
       &:focus {
-        background-image: svg-load('../blocks/socials/bg-img/instagram-icon.svg', fill=$icon-bg);
+        background-image: svg-load('../blocks/socials/bg-img/instagram-icon.svg', fill=$link-color--hover);
       }
     }
   }

@@ -17,9 +17,6 @@
     white-space: nowrap;
     user-select: none;
     background-color: transparent;
-    //background-image: svg-load('../blocks/sprite-svg/svg/globe-icon.svg', fill=$title-color);
-    //background-position: center;
-    //background-repeat: no-repeat;
     background-size: 20px;
     border: none;
     cursor: pointer;
@@ -49,7 +46,7 @@
   }
 
   &__list {
-    min-width: 40px;
+    min-width: 30px;
     padding: 10px 0;
     box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
     border-radius: 6px;
@@ -61,6 +58,7 @@
   }
 
   &__item {
+    padding-left: 0;
 
     &.active {
 
@@ -74,15 +72,20 @@
   &__link {
     display: block;
     padding: 5px 1em;
+    font-size: 16px;
     font-weight: inherit;
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
     color: $title-color;
 
-     @media (min-width: $screen-md) {
-       text-align: right;
-     }
+    @media (min-width: $screen-md) {
+      text-align: right;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 18px;
+    }
 
     &:hover,
     &:focus {

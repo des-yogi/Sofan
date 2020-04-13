@@ -33,7 +33,13 @@
     "tabs": [],
     "text-input": [],
     "to-top": [],
-    "typo": []
+    "typo": [],
+    "suite-tab": [],
+    "features": [],
+    "work-stages": [],
+    "consultation-request": [],
+    "sticky": [],
+    "features-slider": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -56,7 +62,8 @@
     "./node_modules/slick-carousel/slick/slick.js",
     "./src/js/libs/popper.min.js",
     "./src/js/libs/util.min.js",
-    "./src/js/libs/collapse.js"
+    "./src/js/libs/collapse.js",
+    "./src/js/libs/jquery.sticky.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"
