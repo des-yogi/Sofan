@@ -1,0 +1,266 @@
+.features {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    position: relative;
+    z-index: 5;
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__sticker {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    background-color: $white;
+  }
+
+  &__nav {
+    margin-bottom: 30px;
+    background-color: $tabs-bg;
+    border-bottom: 4px solid $green-bg;
+
+    @media (min-width: $screen-xl) {
+      background: none;
+      border-bottom: none;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $screen-xl) {
+      background-color: $tabs-bg;
+      border-bottom: 4px solid $green-bg;
+    }
+  }
+
+  &__nav-item {
+    margin-right: 30px;
+
+    @media (min-width: $screen-md) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      #{$block-name}__nav-link {
+        position: relative;
+        color: $link-color--hover;
+        pointer-events: none;
+
+        &::after {
+          display: block;
+          content: "";
+          position: absolute;
+          z-index: 1;
+          bottom: -4px;
+          left: -15px;
+          right: -15px;
+          height: 4px;
+          background-color: $link-color--hover;
+
+          @media (min-width: $screen-md) {
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__nav-link {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 0;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: $text-color;
+    user-select: none;
+
+    @media (min-width: $screen-md) {
+      padding: 20px 30px;
+      font-size: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  &__details {
+    padding: 30px 0;
+    background-color: $tabs-bg;
+  }
+
+  &__details-list {
+    margin-top: 0;
+  }
+
+  &__details-inner {
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__details-title {
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-md) {
+      flex: 0 0 35%;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      width: 35%;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 26%;
+    }
+
+    & > span {
+
+      @media (min-width: $screen-md) {
+        flex: 1 1 auto;
+        height: 2px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-bottom: 1px dashed #828282;
+      }
+    }
+  }
+
+  &__details-defin {
+    font-weight: 500;
+
+    @media (min-width: $screen-md) {
+      flex: 1 1 auto;
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 110px;
+      padding-bottom: 110px;
+    }
+  }
+
+  &__text-col {
+    @include col(xs,12);
+    @include col(xl,7);
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list-col {
+    @include col(xs,12);
+    @include col-offset(xl,1);
+    @include col(xl,4);
+  }
+
+  &__text {
+
+    *:first-child {
+      margin-top: 0 !important;
+    }
+  }
+
+  &__list {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: block;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 50px !important;
+    margin-bottom: 1em;
+
+    @media (min-width: $screen-md) {
+      width: calc(50% - 15px);
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 100%;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 35px;
+      height: 35px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: left top;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--color {
+
+      &::after {
+        background-size: 28px 33px;
+        background-image: svg-load('../blocks/features/bg-img/palette-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--time {
+
+      &::after {
+        background-size: 35px 25px;
+        background-image: svg-load('../blocks/features/bg-img/timer-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--service {
+
+      &::after {
+        background-size: 27px 24px;
+        background-image: svg-load('../blocks/features/bg-img/service-icon.svg', fill=$main-color);
+      }
+    }
+  }
+}

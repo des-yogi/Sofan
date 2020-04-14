@@ -78,15 +78,15 @@ h4,
 h5,
 h6 {
   // margin-top: 1em;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-family: $font-family;
   font-weight: 500;
   line-height: 1.3;
   color: $title-color;
 
-  @media (min-width: $screen-xl) {
-    margin-bottom: 20px;
-  }
+  // @media (min-width: $screen-xl) {
+  //   margin-bottom: 20px;
+  // }
 }
 
 
@@ -98,14 +98,8 @@ h1 {
   font-weight: 700;
 
   @media (min-width: $screen-md) {
-    font-size: $font-size--h1 * 1.333;
+    font-size: $font-size--h1 * 1.5;
     //line-height: 44px;
-  }
-
-  @media (min-width: $screen-xl) {
-    //margin-bottom: 50px;
-    font-size: $font-size--h1 * 2;
-    //line-height: 50px;
   }
 }
 
@@ -116,14 +110,14 @@ h2 {
   font-size: $font-size--h2;
 
   @media (min-width: $screen-md) {
-    font-size: $font-size--h2 * 1.21;
+    font-size: $font-size--h2 * 1.08;
     //line-height: 44px;
   }
 
   @media (min-width: $screen-xl) {
     //margin-top: 25px;
     //margin-bottom: 25px;
-    font-size: $font-size--h2 * 1.685;
+    font-size: $font-size--h2 * 1.385;
     //line-height: 50px;
   }
 }
@@ -136,7 +130,7 @@ h3 {
   //font-weight: 500;
 
   @media (min-width: $screen-md) {
-    font-size: $font-size--h3 * 1.056;
+    font-size: $font-size--h3 * 1.167;
   }
 
   @media (min-width: $screen-xl) {
@@ -175,14 +169,14 @@ h6 {
   }
 }
 
-div,
-section,
-article {
+// div,
+// section,
+// article {
 
-  *:first-child {
-    margin-top: 0;
-  }
-}
+//   *:first-child {
+//     margin-top: 0;
+//   }
+// }
 
 .p,
 p,
@@ -267,15 +261,11 @@ blockquote {
 }
 
 dt {
-  font-weight: 700;
+  //font-weight: 500;
 }
 
 dd {
   margin-left: 0;
-
-  @media (min-width: $screen-sm) {
-    margin-left: 1.5rem;
-  }
 
   & + dt {
     margin-top: 0.5em;
@@ -321,6 +311,7 @@ pre {
 }
 
 ul {
+  padding-left: 0;
   list-style: none;
 
   li {
@@ -332,15 +323,14 @@ ul {
       content: "";
       position: absolute;
       left: 0;
-      top: calc(#{$line-height} / 2);
-      transform: translateY(-4px);
+      top: 7px;
       width: 6px;
       height: 6px;
       border-radius: 50%;
       background-color: currentColor;
 
       @media (min-width: $screen-xl) {
-        transform: translateY(-3px);
+        top: 8px;
       }
     }
 

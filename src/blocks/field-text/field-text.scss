@@ -1,0 +1,114 @@
+$gray-lighter:                hsl(0, 0%, 80%) !default;
+$border-color:                hsl(0, 0%, 60%) !default;
+
+$text-color--muted:           hsl(0, 0%, 50%) !default;
+
+$line-height:                 1.375em !default;
+
+$field-padding-vertical:      0.3em !default;
+$field-padding-horizontal:    0.7em !default;
+
+$border-radius:               3px !default;
+
+.field-text {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  margin-bottom: 20px;
+
+  // @media (min-width: $screen-lg) {
+  //   margin-bottom: 30px;
+  // }
+
+  &__name {
+    @include field-name;
+  }
+
+  &__input-wrap {
+    display: block;
+  }
+
+  &__input {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    // height: 2.125em;
+    padding: $field-padding-vertical  $field-padding-horizontal;
+    margin: 0;
+    line-height: $line-height;
+    font-size: 15px;
+    font-family: inherit;
+    background-color: #fff;
+    border: 2px solid $main-color;
+    border-radius: $border-radius;
+    appearance: textfield;
+
+    &:focus {
+      @include field-focus;
+    }
+
+    &[disabled],
+    &[readonly] {
+      cursor: default;
+      border-color: $text-muted;
+    }
+
+    &[required] {
+      padding-right: 30px;
+      background-color: $white;
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      background-image: svg-load('../blocks/sprite-svg/svg/asterisk-icon.svg', fill=$main-color);
+      background-size: 7px;
+    }
+
+    &[type='search']::-webkit-search-cancel-button,
+    &[type='search']::-webkit-search-decoration {
+      -webkit-appearance: none; // stylelint-disable-line  property-no-vendor-prefix
+    }
+
+    &[type='number']::-webkit-inner-spin-button,
+    &[type='number']::-webkit-outer-spin-button {
+      // height: auto;
+    }
+
+    &[type='color'] {
+      // max-width: 100px;
+      padding: 0;
+    }
+
+    &::placeholder {
+      color: inherit;
+      opacity: 1;
+    }
+
+    @at-root textarea#{&} {
+      //$textarea-height: ($line-height * 2) + ($field-padding-vertical * 2);
+
+      height: auto;
+      min-height: 3em;
+      resize: vertical;
+    }
+
+    &--submit {
+      white-space: nowrap;
+      color: $white;
+      background-color: $black;
+      border-color: $black;
+      user-select: none;
+      cursor: pointer;
+
+      &[disabled],
+      &[readonly] {
+        cursor: default;
+        background-color: $text-muted;
+        border-color: $text-muted;
+      }
+    }
+  }
+
+  &__help-text {
+    @include field-help-text;
+  }
+}

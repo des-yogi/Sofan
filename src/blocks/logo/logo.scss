@@ -2,23 +2,33 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  flex-shrink: 0;
+  flex-grow: 0;
   display: inline-block;
   vertical-align: top;
   white-space: nowrap;
 
   img {
     display: block;
-    width: 128px;
-    height: 18px;
+    width: 75px;
+    height: 52px;
 
     @media (min-width: $screen-md) {
-      width: 213px;
-      height: 30px;
+      width: 90px;
+      height: 63px;
     }
 
     @media (min-width: $screen-xl) {
-      width: 322px;
-      height: 45px;
+      width: 129px;
+      height: 90px;
+    }
+  }
+
+  &--footer {
+
+    img {
+      width: 200px !important;
+      height: 140px !important;
     }
   }
 }

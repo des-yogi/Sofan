@@ -1,0 +1,66 @@
+.features-slider {
+  margin-bottom: 30px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__main {
+    margin-bottom: 10px;
+  }
+
+  &__main-col {
+    @include col(xs,12);
+    @include col-offset(sm,1);
+    @include col(sm,10);
+    padding: 0 15px;
+
+    @media (min-width: $screen-md) {
+      padding: 0 15px;
+    }
+  }
+
+  &__main-slide {
+
+    img {
+      display: block;
+    }
+  }
+
+  &__nav {
+    //position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__thumb {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+
+    @media (min-width: $screen-md) {
+      margin-right: 30px;
+    }
+
+    img {
+      display: block;
+      width: 130px;
+      height: 97px;
+      object-fit: cover;
+      object-position: center;
+
+      @media (min-width: $screen-md) {
+        width: 150px;
+        height: 112px;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 160px;
+        height: 120px;
+      }
+    }
+  }
+}

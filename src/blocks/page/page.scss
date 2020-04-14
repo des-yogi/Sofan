@@ -209,8 +209,12 @@ a {
   padding-left: 0;
   list-style: none;
 
-  li::before {
-    display: none;
+  li {
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -257,6 +261,53 @@ a {
     $xl-grid-gutter:  $grid-gutter-width,
     $xxl-grid-gutter: $grid-gutter-width
   );
+}
+
+.colored {
+  color: $main-color;
+}
+
+// Slick slider custom style
+.slick-arrow {
+  @include text-hide;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  user-select: none;
+  cursor: pointer;
+
+  @media (min-width: $screen-md) {
+    width: 42px;
+    height: 42px;
+    background-color: $link-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 28px;
+  }
+
+  @media (min-width: $screen-xl) {
+    width: 64px;
+    height: 64px;
+    background-size: 29px 50px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $link-color--hover;
+    outline: none;
+  }
+
+  &.slick-prev {
+    left: 15px;
+    z-index: 1;
+    background-image: svg-load('../blocks/sprite-svg/svg/arrow-prev.svg', fill=$white);
+  }
+
+  &.slick-next {
+    right: 15px;
+    background-image: svg-load('../blocks/sprite-svg/svg/arrow-next.svg', fill=$white);
+  }
 }
 
 

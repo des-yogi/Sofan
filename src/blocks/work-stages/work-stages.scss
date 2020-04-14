@@ -1,0 +1,78 @@
+.work-stages {
+  padding: 60px 0;
+  background-color: $green-bg;
+
+  @media (min-width: $screen-md) {
+    padding: 70px 0;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs,12);
+    @include col-offset(md,1);
+    @include col(md,10);
+  }
+
+  &__list {
+    margin-top: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__item {
+    @include col(xs,12);
+    @include col(md,6);
+    @include col(xl,4);
+    margin-bottom: 50px;
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
+    &:nth-last-child(2) {
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-last-child(3) {
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    padding-left: 57px;
+    font-size: 14px;
+
+    p {
+      font-weight: 300;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    font-size: 35px;
+    white-space: nowrap;
+
+    &::after {
+      display: block;
+      content: ".";
+      position: absolute;
+      bottom: -1px;
+      right: -9px;
+      color: inherit;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+}

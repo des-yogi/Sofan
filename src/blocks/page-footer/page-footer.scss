@@ -1,4 +1,126 @@
 .page-footer {
+  color: $white;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__top {
+    padding: 40px 0;
+    font-size: 14px;
+    background-color: $footer-bg;
+
+    @media (min-width: $screen-md) {
+      font-size: 16px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 50px 0;
+    }
+  }
+
+  &__logo-col {
+    @include col-offset(xs,1);
+    @include col(xs,10);
+    @include col-offset(sm,2);
+    @include col(sm,8);
+    @include col-offset(md,0);
+    @include col(md,4);
+    @include col(xl,3);
+    margin-bottom: 30px;
+  }
+
+  &__menu-col {
+    display: none;
+    @include col(xl,3);
+
+    @media (min-width: $screen-xl) {
+      display: block;
+    }
+  }
+
+  &__catalog-col {
+    display: none;
+    //@include col-offset(md,0);
+    @include col(md,4);
+    @include col(xl,3);
+
+    @media (min-width: $screen-md) {
+      display: block;
+      padding-left: 50px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 40px;
+    }
+  }
+
+  &__contacts-col {
+    @include col-offset(xs,1);
+    @include col(xs,10);
+    @include col-offset(sm,2);
+    @include col(sm,8);
+    @include col-offset(md,0);
+    @include col(md,4);
+    @include col(xl,3);
+
+    @media (min-width: $screen-md) {
+      padding-left: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 15px;
+    }
+  }
+
+  &__logo {
+
+    p span {
+      display: inline-block;
+      vertical-align: baseline;
+      white-space: nowrap;
+    }
+  }
+
+  &__menu {
+
+  }
+
+  &__block-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: inherit;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__menu-list {
+
+    &--worktime {
+      margin-top: 1em;
+      font-size: smaller;
+    }
+  }
+
+  &__menu-item {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__menu-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__contacts {
+
+  }
+
+  &__bottom {
+    font-size: 14px;
+    background-color: $black;
+  }
 }
