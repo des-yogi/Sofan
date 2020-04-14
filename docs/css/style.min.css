@@ -162,19 +162,19 @@ a.btn--disabled {
     display: inline-block;
     vertical-align: baseline;
     max-width: 100%;
-    margin-right: 0.6em;
+    margin-right: 4px;
     margin-bottom: 0.2em;
     overflow: hidden;
     text-overflow: ellipsis; }
 .breadcrumbs__item:not(:last-child)::after {
       content: '→';
       display: inline-block;
-      margin-left: 0.8em;
+      margin-left: 4px;
       font-weight: 700;
-      color: #828282; }
+      color: #000000; }
 .breadcrumbs__item:last-child .breadcrumbs__link {
       text-decoration: none;
-      color: #000000;
+      color: #828282;
       pointer-events: none; }
 .breadcrumbs__link {
     max-width: 100%;
@@ -2788,6 +2788,12 @@ a[href^="tel:"] {
 .slick-arrow.slick-next {
     right: 15px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 47' fill='white'%3E%3Cpath d='M.93,46.08a3.14,3.14,0,0,0,4.45,0L26.26,25.27a2.48,2.48,0,0,0,0-3.54L5.38.92A3.14,3.14,0,0,0,.93,5.35l18.2,18.16L.9,41.67A3.12,3.12,0,0,0,.93,46.08Z'/%3E%3C/svg%3E"); }
+.slider-navigation .slick-current img {
+  display: block;
+  border: 8px solid #9fbc0f; }
+.sticky-wrapper.is-sticky #sticker {
+  -webkit-box-shadow: 0 15px 30px 0 rgba(138, 149, 158, 0.2);
+          box-shadow: 0 15px 30px 0 rgba(138, 149, 158, 0.2); }
 /* &__element {
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
   @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
