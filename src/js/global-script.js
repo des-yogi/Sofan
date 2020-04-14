@@ -38,3 +38,31 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 
 }());
 
+$( document ).ready(function() {
+  // focus в поле при скроде до попадания в окно
+  var ifShown = false;
+
+  function scrollTracking() {
+
+    if (ifShown) {
+      return false;
+    }
+
+    var wt = $(window).scrollTop();
+    var wh = $(window).height();
+    var et = $('#name').offset().top;
+    var eh = $('#name').outerHeight();
+    var dh = $(document).height();
+
+    if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+      //console.log('Элемент показан');
+      ifShown = true;
+      $('#name').focus();
+    }
+  };
+
+  $(window).scroll(function(){
+    scrollTracking();
+  });
+
+});
