@@ -1,56 +1,74 @@
 .copyrights {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  font-size: 13px;
+  padding: 20px 0;
+  font-size: 14px;
   color: inherit;
 
   @media (min-width: $screen-md) {
-    align-items: center;
   }
 
   @media (min-width: $screen-xl) {
-    flex-direction: row;
-    align-items: baseline;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__owner-col {
+    @include col(xs,12);
+    @include col(md,4);
+    margin-bottom: 1em;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__copyright-col {
+    @include col(xs,12);
+    @include col(md,4);
+    margin-bottom: 1em;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+
+  &__dev-col {
+    @include col(xs,12);
+    @include col(md,4);
+
+    @media (min-width: $screen-md) {
+      text-align: right;
+    }
+  }
+
   &__owner {
-    order: 1;
-    opacity: 0.5;
 
-    @media (min-width: $screen-xl) {
-      order: 0;
-      margin-right: 90px;
-    }
   }
 
-  &__docs-list {
+  &__copyright {
 
-    @media (min-width: $screen-md) {
-      display: flex;
-      flex-wrap: wrap;
-    }
   }
 
-  &__docs-item {
-    margin-bottom: 20px;
+  &__dev {
+    display: inline-flex;
+    align-items: center;
 
-    @media (min-width: $screen-md) {
-      margin-right: 1em;
+    & > span {
+      margin-right: 10px;
     }
-  }
 
-  &__docs-link {
-    white-space: nowrap;
-    color: inherit;
-    opacity: 0.5;
+    a {
+      opacity: 0.8;
 
-    &:hover,
-    &:focus {
-      opacity: 1;
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+
+    img {
+      display: block;
     }
   }
 }

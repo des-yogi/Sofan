@@ -311,6 +311,7 @@ pre {
 }
 
 ul {
+  padding-left: 0;
   list-style: none;
 
   li {
@@ -322,17 +323,15 @@ ul {
       content: "";
       position: absolute;
       left: 0;
-      //top: calc(#{$line-height} / 2);
-      top: calc(0.5em + 3px);
-      //transform: translateY(-4px);
+      top: 7px;
       width: 6px;
       height: 6px;
       border-radius: 50%;
       background-color: currentColor;
 
-      // @media (min-width: $screen-xl) {
-      //   transform: translateY(-3px);
-      // }
+      @media (min-width: $screen-xl) {
+        top: 8px;
+      }
     }
 
     ul li::before {

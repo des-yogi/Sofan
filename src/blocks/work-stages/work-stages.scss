@@ -46,7 +46,30 @@
   }
 
   &__card {
+    position: relative;
+    padding-left: 57px;
+    font-size: 14px;
 
+    p {
+      font-weight: 300;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    font-size: 35px;
+    white-space: nowrap;
+
+    &::after {
+      display: block;
+      content: ".";
+      position: absolute;
+      bottom: -1px;
+      right: -9px;
+      color: inherit;
+    }
   }
 
   &__title {

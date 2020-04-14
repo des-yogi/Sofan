@@ -34,12 +34,12 @@
     "text-input": [],
     "to-top": [],
     "typo": [],
+    "suite-tab": [],
     "features": [],
     "work-stages": [],
     "consultation-request": [],
     "sticky": [],
-    "features-slider": [],
-    "field-text": []
+    "features-slider": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
