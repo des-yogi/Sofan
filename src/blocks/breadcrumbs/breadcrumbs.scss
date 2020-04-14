@@ -19,7 +19,7 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     display: inline-block;
     vertical-align: baseline;
     max-width: 100%;
-    margin-right: 0.6em;
+    margin-right: 4px;
     margin-bottom: 0.2em;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -31,16 +31,16 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     &:not(:last-child)::after {
       content: '→';
       display: inline-block;
-      margin-left: 0.8em;
+      margin-left: 4px;
       font-weight: 700;
-      color: $text-muted;
+      color: $text-color;
     }
 
     &:last-child {
 
       #{$block-name}__link {
         text-decoration: none;
-        color: $text-color;
+        color: $text-muted;
         pointer-events: none;
       }
     }

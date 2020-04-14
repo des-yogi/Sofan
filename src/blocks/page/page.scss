@@ -310,6 +310,24 @@ a {
   }
 }
 
+.slider-navigation {
+
+  .slick-current {
+
+    img {
+      display: block;
+      border: 8px solid $main-color;
+    }
+  }
+}
+
+.sticky-wrapper.is-sticky {
+
+  #sticker {
+    box-shadow: 0 15px 30px 0 rgba(138,149,158,0.2);
+  }
+}
+
 
 /* &__element {
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
