@@ -13,11 +13,31 @@
   }
 
   &__sticker {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 0;
     background-color: $white;
+
+    @media (min-width: $screen-md) {
+      justify-content: initial;
+    }
+
+    input,
+    button {
+
+      @media (min-width: $screen-md) {
+        margin-left: 30px;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 250px;
+        margin-left: 70px;
+      }
+    }
   }
 
   &__nav {

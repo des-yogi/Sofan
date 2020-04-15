@@ -1,0 +1,121 @@
+$typo-margin-vertical: 20px !default;
+
+.field-num {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  //margin-bottom: $typo-margin-vertical;
+
+  &__name {
+    @include field-name;
+  }
+
+  &__input-wrap {
+    display: block;
+  }
+
+  &__input-and-btns {
+    display: block;
+    position: relative;
+    width: 86px;
+  }
+
+  &__input {
+    @include field-text;
+    min-height: 28px;
+    padding: 1px 28px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+
+    #{$block-name}:not(#{$block-name}--disabled) button:focus ~ & { // stylelint-disable-line
+      @include field-focus;
+      box-shadow: none;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    padding: 0;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    font: 0/0 a; // stylelint-disable-line
+    color: transparent;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 18px;
+
+    &:hover,
+    &:focus {
+      //background-color: $gray-lightest;
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--plus,
+    &--minus {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--plus {
+      right: 1px;
+      background-image: svg-load('../blocks/field-num/bg-img/plus.svg', fill=$text-muted);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/field-num/bg-img/plus.svg', fill=$main-color);
+      }
+    }
+
+    &--minus {
+      left: 1px;
+      background-image: svg-load('../blocks/field-num/bg-img/minus.svg', fill=$text-muted);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/field-num/bg-img/minus.svg', fill=$main-color);
+      }
+    }
+
+    #{$block-name}--disabled & {
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+
+  // &__help-text {
+  //   @include field-help-text;
+  // }
+
+
+
+  // &--error {
+
+  //   #{$block-name}__name,
+  //   #{$block-name}__input,
+  //   #{$block-name}__help-text {
+  //     color: $color-danger;
+  //   }
+
+  //   #{$block-name}__input {
+  //     border-color: $color-danger;
+  //     background-color: lighten($color-danger, 35%);
+  //   }
+  // }
+}
