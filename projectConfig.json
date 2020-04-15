@@ -39,7 +39,9 @@
     "consultation-request": [],
     "sticky": [],
     "features-slider": [],
-    "field-text": []
+    "field-text": [],
+    "suite-card": [],
+    "field-num": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
