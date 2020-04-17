@@ -1,0 +1,98 @@
+.mob-menu {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    margin-bottom: 50px;
+  }
+
+  &__link {
+    display: block;
+    padding: 20px 40px;
+    font-size: 22px;
+    color: $text-color;
+    text-decoration: none;
+    user-select: none;
+
+    @media (min-width: $screen-md) {
+      padding: 20px 50px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $link-color;
+    }
+
+    &:active {
+      background-color: $link-color--hover;
+    }
+  }
+
+  &__contacts {
+    padding: 0 40px;
+
+    @media (min-width: $screen-md) {
+      padding: 0 50px;
+    }
+  }
+
+  &__tel-list {
+    margin-bottom: 50px;
+  }
+
+  &__tel-item {
+    margin-bottom: 15px;
+  }
+
+  &__tel-link {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: $text-color;
+
+    &::before {
+      display: inline-block;
+      vertical-align: middle;
+      transform: translateY(-2px);
+      content: "";
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+      background-repeat: no-repeat;
+      background-size: 22px;
+      background-position: center;
+    }
+
+    &--kyivstar {
+
+      &::before {
+        background-image: svg-load('../blocks/page-header/bg-img/kyivstar-icon.svg', fill=$text-color);
+      }
+    }
+
+    &--vodafon {
+
+      &::before {
+        background-image: svg-load('../blocks/page-header/bg-img/vodafone-icon.svg', fill=$text-color);
+      }
+    }
+
+    &--life {
+
+      &::before {
+        background-image: svg-load('../blocks/page-header/bg-img/lifecell-icon.svg', fill=$text-color);
+      }
+    }
+  }
+
+  &__service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
