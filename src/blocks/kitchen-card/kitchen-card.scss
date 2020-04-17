@@ -1,0 +1,55 @@
+.kitchen-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.18);
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img {
+
+    img {
+      display: block;
+    }
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 15px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+
+  &__btn {
+    width: 100%;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}

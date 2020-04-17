@@ -26,7 +26,7 @@
   &:hover,
   &:focus {
     text-decoration: none;
-    //color: $text-color;
+    color: $white;
     background-color: $link-color--hover;
     border-color: $link-color--hover;
     outline: none;
@@ -57,23 +57,23 @@
 
 
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
+  &--outline {
+    color: $link-color;
+    background-color: $white;
+    border-color: $link-color;
 
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
+    &:hover,
+    &:focus {
+      color: $link-color--hover;
+      background-color: $white;
+      border-color: $link-color--hover;
+    }
 
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
+    &--disabled,
+    &:disabled {
+      color: $text-muted;
+      background-color: $white;
+      border-color: $text-muted;
+    }
+  }
 }

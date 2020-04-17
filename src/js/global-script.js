@@ -40,29 +40,36 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 
 $( document ).ready(function() {
   // focus в поле при скроде до попадания в окно
-  var ifShown = false;
+  var target = document.getElementById('target-field');
 
-  function scrollTracking() {
+  if (target) {
 
-    if (ifShown) {
-      return false;
-    }
+    var ifShown = false;
 
-    var wt = $(window).scrollTop();
-    var wh = $(window).height();
-    var et = $('#name').offset().top;
-    var eh = $('#name').outerHeight();
-    var dh = $(document).height();
+    function scrollTracking() {
 
-    if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
-      //console.log('Элемент показан');
-      ifShown = true;
-      $('#name').focus();
-    }
-  };
+      if (ifShown) {
+        return false;
+      }
 
-  $(window).scroll(function(){
-    scrollTracking();
-  });
+      var wt = $(window).scrollTop();
+      var wh = $(window).height();
+      var et = $('#target-field').offset().top;
+      var eh = $('#target-field').outerHeight();
+      var dh = $(document).height();
 
+      if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+        //console.log('Элемент показан');
+        ifShown = true;
+        $('#target-field').focus();
+      }
+    };
+
+    $(window).scroll(function(){
+      scrollTracking();
+    });
+
+  }
+
+  return;
 });
