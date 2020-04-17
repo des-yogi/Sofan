@@ -17,7 +17,6 @@
     "lang-switcher": [],
     "logo": [],
     "main-nav": [],
-    "mmenu": [],
     "modal": [],
     "object-fit-polyfill": [],
     "page": [],
@@ -41,7 +40,9 @@
     "features-slider": [],
     "field-text": [],
     "suite-card": [],
-    "field-num": []
+    "field-num": [],
+    "drawer": [],
+    "mob-menu": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -59,7 +60,6 @@
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
-    "./node_modules/jquery.mmenu/dist/jquery.mmenu.all.js",
     "./node_modules/object-fit-images/dist/ofi.js",
     "./node_modules/slick-carousel/slick/slick.js",
     "./src/js/libs/popper.min.js",
