@@ -42,7 +42,10 @@
     "suite-card": [],
     "field-num": [],
     "drawer": [],
-    "mob-menu": []
+    "mob-menu": [],
+    "kitchen-catalog": [],
+    "kitchen-card": [],
+    "filters-block": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

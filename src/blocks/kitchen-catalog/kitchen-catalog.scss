@@ -1,0 +1,84 @@
+.kitchen-catalog {
+  margin-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 80px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__filter-col {
+    @include col(xl,3);
+    display: none;
+
+    @media (min-width: $screen-xl) {
+      display: block;
+    }
+  }
+
+  &__gallery-col {
+    @include col(xs,12);
+    @include col(xl,9);
+  }
+
+  &__inner-col {
+    @include col(xs,12);
+    @include col(md,6);
+    @include col(lg,4);
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__gallery {
+
+  }
+
+  &__fltr-btn-wrapper {
+    position: relative;
+    z-index: 5;
+    margin-bottom: 30px;
+    background-color: $white;
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+
+    button {
+      width: 100%;
+
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+        transform: translateY(-1px);
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 18px 12px;
+        background-image: svg-load('../blocks/sprite-svg/svg/filter-icon.svg', fill=$link-color);
+      }
+
+      &:hover,
+      &:focus {
+
+        &::before {
+          background-image: svg-load('../blocks/sprite-svg/svg/filter-icon.svg', fill=$link-color--hover);
+        }
+      }
+    }
+  }
+}
