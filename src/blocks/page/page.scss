@@ -267,6 +267,17 @@ a {
   color: $main-color;
 }
 
+.publishedon {
+  display: inline-block;
+  vertical-align: baseline;
+  color: $text-muted;
+}
+
+.main-content {
+  //position: relative;
+  //background-color: red;
+}
+
 // Slick slider custom style
 .slick-arrow {
   @include text-hide;

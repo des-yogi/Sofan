@@ -174,4 +174,78 @@
       }
     }
   }
+
+  &--map {
+
+    #{$block-name}__link {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+
+      &--mess {
+        background-size: contain;
+        background-image: svg-load('../blocks/socials/bg-img/messenger-icon.svg', fill=$text-color);
+
+        &:hover,
+        &:focus {
+          background-image: svg-load('../blocks/socials/bg-img/messenger-icon.svg', fill=$link-color--hover);
+        }
+      }
+
+      &--fb {
+        background-size: contain;
+        background-image: svg-load('../blocks/socials/bg-img/facebook-icon.svg', fill=$text-color);
+
+        &:hover,
+        &:focus {
+          background-image: svg-load('../blocks/socials/bg-img/facebook-icon.svg', fill=$link-color--hover);
+        }
+      }
+
+      &--tg {
+        background-size: contain;
+        background-image: svg-load('../blocks/socials/bg-img/telegram-icon.svg', fill=$text-color);
+
+        &:hover,
+        &:focus {
+          background-image: svg-load('../blocks/socials/bg-img/telegram-icon.svg', fill=$link-color--hover);
+        }
+      }
+
+      &--wapp {
+        background-size: contain;
+        background-image: svg-load('../blocks/socials/bg-img/whatsapp-icon.svg', fill=$text-color);
+
+        &:hover,
+        &:focus {
+          background-image: svg-load('../blocks/socials/bg-img/whatsapp-icon.svg', fill=$link-color--hover);
+        }
+      }
+
+      &--vib {
+        background-size: contain;
+        background-image: svg-load('../blocks/socials/bg-img/viber-icon.svg', fill=$text-color);
+
+        &:hover,
+        &:focus {
+          background-image: svg-load('../blocks/socials/bg-img/viber-icon.svg', fill=$link-color--hover);
+        }
+      }
+
+      &--insta {
+        background-size: contain;
+        background-image: svg-load('../blocks/socials/bg-img/instagram-icon.svg', fill=$text-color);
+
+        &:hover,
+        &:focus {
+          background-image: svg-load('../blocks/socials/bg-img/instagram-icon.svg', fill=$link-color--hover);
+        }
+      }
+    }
+  }
 }

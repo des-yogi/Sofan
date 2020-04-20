@@ -1,0 +1,65 @@
+.contact-card {
+  height: 100%;
+  padding: 50px 40px;
+  text-align: center;
+  border: 2px solid $border-color;
+
+  @media (min-width: $screen-md) {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  @media (min-width: $screen-xl) {}
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__icon {
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--call {
+      background-size: 47px 47px;
+       background-image: svg-load('../blocks/contact-card/bg-img/call-icon.svg', fill=$text-color);
+    }
+
+    &--mail {
+      background-size: 47px 32px;
+      background-image: svg-load('../blocks/contact-card/bg-img/mail-icon.svg', fill=$text-color);
+    }
+
+    &--location {
+      background-size: 47px 47px;
+      background-image: svg-load('../blocks/contact-card/bg-img/location-icon.svg', fill=$text-color);
+    }
+  }
+
+  &__text {
+    color: $link-color;
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 10px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}

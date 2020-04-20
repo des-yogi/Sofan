@@ -1,0 +1,118 @@
+.advantages {
+  margin-bottom: 60px;
+
+  @media (min-width: $screen-sm) {
+    padding: 20px 20px;
+    //box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  @media (min-width: $screen-md) {
+    position: relative;
+    padding: 30px 45px;
+    margin-top: -40px;
+    margin-bottom: 70px;
+    background-color: $white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: -20px;
+    margin-bottom: 110px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    margin-top: 0;
+    list-style: none;
+  }
+
+  &__col {
+    @include col(xs,12);
+    @include col(sm,6);
+    @include col(xl,3);
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: center;
+    padding: 35px 40px;
+
+    @media (min-width: $screen-sm) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &__num {
+    font-size: 64px;
+    line-height: 1.2em;
+
+    &::after {
+      display: inline-block;
+      vertical-align: baseline;
+      content: "";
+      width: 50px;
+      height: 50px;
+      margin-left: 10px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+
+    &--cup {
+
+      &::after {
+        background-size: 48px 48px;
+        background-image: svg-load('../blocks/advantages/bg-img/cup-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--done-orders {
+
+      &::after {
+        background-size: 48px 45px;
+        background-image: svg-load('../blocks/advantages/bg-img/done-orders-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--long-warranty {
+
+      &::after {
+        background-size: 48px 48px;
+        background-image: svg-load('../blocks/advantages/bg-img/long-warranty-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--production-time {
+
+      &::after {
+        background-size: 48px 46px;
+        background-image: svg-load('../blocks/advantages/bg-img/production-time-icon.svg', fill=$main-color);
+      }
+    }
+  }
+
+  &__descr {
+    font-size: 18px;
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      padding-right: 30px;
+    }
+  }
+}

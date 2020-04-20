@@ -1,0 +1,37 @@
+.contact-block {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs,12);
+    @include col-offset(md,3);
+    @include col(md,6);
+    @include col-offset(xl,0);
+    @include col(xl ,4);
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
