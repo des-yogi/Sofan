@@ -1,0 +1,160 @@
+.middle-banner {
+  text-align: center;
+  color: $white;
+  background-color: $footer-bg;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__container {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 110px;
+      padding-bottom: 110px;
+    }
+
+    .row {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.6;
+      background-color: $black;
+    }
+  }
+
+  &__col-intro {
+    @include col(xs,12);
+    @include col-offset(md,1);
+    @include col(md,10);
+    @include col-offset(xl,2);
+    @include col(xl,8);
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__col-list {
+    @include col(xs,12);
+    @include col-offset(md,3);
+    @include col(md,6);
+    @include col-offset(xl,0);
+    @include col(xl,12);
+    margin: 10px 0 40px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-top: 0;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__col-btn {
+    @include col(xs,12);
+    @include col-offset(md,3);
+    @include col(md,6);
+    @include col-offset(xl,4);
+    @include col(xl,4);
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &__intro {
+
+  }
+
+  &__title {
+    color: inherit;
+  }
+
+  &__list {
+    margin-top: 0;
+    list-style: none;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    padding-left: 0;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-xl) {
+      width: calc(33.333% - 20px);
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &__item-icon {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--production {
+      background-size: 75px 90px;
+      background-image: svg-load('../blocks/middle-banner/bg-img/production.svg', fill=$white);
+    }
+
+    &--delivery {
+      background-size: 87px 56px;
+      background-image: svg-load('../blocks/middle-banner/bg-img/delivery.svg', fill=$white);
+    }
+
+    &--contract {
+      background-size: 82px 70px;
+      background-image: svg-load('../blocks/middle-banner/bg-img/contract.svg', fill=$white);
+    }
+  }
+
+  &__item-title {
+    margin-top: 0;
+    color: inherit;
+  }
+}

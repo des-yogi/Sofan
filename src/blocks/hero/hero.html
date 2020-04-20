@@ -1,14 +1,35 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/hero/hero.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="hero">content</div>
-
 -->
+
+<section class="hero">
+
+  <div class="hero__img">
+    <picture>
+      <source data-srcset="img/hero-1-dt.webp" media="(min-width: 1280px)" type="image/webp">
+      <source data-srcset="img/hero-1-dt.jpg" media="(min-width: 1280px)">
+      <!-- 1920x800 -->
+      <source data-srcset="img/hero-1.webp" media="(min-width: 992px)" type="image/webp">
+      <source data-srcset="img/hero-1.jpg" media="(min-width: 992px)">
+      <!-- 1276x900 -->
+      <source data-srcset="img/hero-1.webp" media="(min-width: 768px)" type="image/webp">
+      <source data-srcset="img/hero-1.jpg" media="(min-width: 768px)">
+      <!-- 992x700 -->
+      <source data-srcset="img/hero-1.webp" type="image/webp">
+      <img class="b-lazy" data-src="img/hero-1.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Кухни Sofan" width="581" height="410">
+    </picture>
+  </div>
+
+  <div class="hero__text">
+    <div class="container">
+      <h1 class="hero__title">Кухні
+        <span>Інтернет-магазин модульних кухонь з фарбованими і шпонованими фасадами</span>
+      </h1>
+      <div class="hero__btn-wrapper">
+        <a href="#" class="btn">Підібрати кухню</a>
+        <a href="#" class="btn btn--outline">Замовити консультацію</a>
+      </div>
+    </div>
+  </div>
+
+</section>

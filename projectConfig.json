@@ -45,7 +45,15 @@
     "mob-menu": [],
     "kitchen-catalog": [],
     "kitchen-card": [],
-    "filters-block": []
+    "filters-block": [],
+    "advantages": [],
+    "style-selection": [],
+    "middle-banner": [],
+    "news-block": [],
+    "news-card": [],
+    "contact-block": [],
+    "contact-card": [],
+    "map-block": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
