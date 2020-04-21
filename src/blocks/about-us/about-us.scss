@@ -1,0 +1,141 @@
+.about-us {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__intro {
+    @include col(xs,12);
+    @include col(md,10);
+    @include col(xl,7);
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__intro-descr {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4em;
+
+    @media (min-width: $screen-md) {
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    margin-top: 0;
+    list-style: none;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 65px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 90px;
+      padding-bottom: 110px;
+    }
+  }
+
+  &__item {
+    @include col(xs,12);
+    @include col(md,6);
+    @include col(xl,5);
+    display: flex;
+    //flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(even) {
+
+      @media (min-width: $screen-xl) {
+        @include col-offset(xl,1);
+      }
+    }
+
+    &::before {
+      flex: 0 0 40px;
+      display: block;
+      content: "";
+      position: static;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 0;
+      background-color: transparent;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media (min-width: $screen-md) {
+        flex: 0 0 50px;
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-right: 30px;
+      }
+    }
+
+    &--quality {
+
+      &::before {
+        background-image: svg-load('../blocks/about-us/bg-img/quality-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--individual {
+
+      &::before {
+        background-image: svg-load('../blocks/about-us/bg-img/individual-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--warranty {
+
+      &::before {
+        background-image: svg-load('../blocks/about-us/bg-img/warranty-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--delivery-payment {
+
+      &::before {
+        background-image: svg-load('../blocks/about-us/bg-img/delivery-payment-icon.svg', fill=$main-color);
+      }
+    }
+  }
+
+  &__item-content {
+    flex: 1 1 auto;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+}
