@@ -53,7 +53,8 @@
     "news-card": [],
     "contact-block": [],
     "contact-card": [],
-    "map-block": []
+    "map-block": [],
+    "about-us": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

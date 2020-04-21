@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Про нас</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <div class="container">
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+      </div>
+
+      <main class="main-content" role="main">
+
+        <section class="about-us">
+          <div class="container">
+
+            <div class="row">
+              <div class="about-us__intro">
+                <h1 class="about-us__title">Декілька слів про нас</h1>
+                <p class="about-us__intro-descr">Маючи власне виробництво по виготовленню фасадів, ми контролюємо якість на всіх етапах виробництва</p>
+              </div>
+            </div>
+
+            <ul class="row  about-us__list">
+              <li class="about-us__item  about-us__item--quality">
+                <div class="about-us__item-content">
+                  <h3>Висока якість матеріалів</h3>
+                  <p>Фасади, фурнітури та всі матеріали від кращих європейських виробників</p>
+                </div>
+              </li>
+              <li class="about-us__item  about-us__item--individual">
+                <div class="about-us__item-content">
+                  <h3>Індивідуальний підхід</h3>
+                  <p>Кожний клієнт отримує індивідуальний проект під свої побажання та розміри своєї кухні</p>
+                </div>
+              </li>
+              <li class="about-us__item  about-us__item--warranty">
+                <div class="about-us__item-content">
+                  <h3>Гарантія</h3>
+                  <p>Кожна кухня супроводжується гарантією 18 місяців з моменту установки кухні.</p>
+                </div>
+              </li>
+              <li class="about-us__item  about-us__item--delivery-payment">
+                <div class="about-us__item-content">
+                  <h3>Доставка та оплата</h3>
+                  <p>Доставка здійснюється протягом 3 тижнів з моменту оплати замовлення</p>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </section>
+
+        <section class="consultation-request">
+
+          <div class="container">
+            <div class="row">
+
+              <div class="consultation-request__text-col">
+                <div class="consultation-request__text">
+                  <h2 class="consultation-request__title">Отримайте <span class="colored">безкоштовну</span> консультацію</h2>
+                  <ul class="consultation-request__list">
+                    <li class="consultation-request__item">
+                      Ми разом з вами складемо проект
+                    </li>
+                    <li class="consultation-request__item">
+                      Дамо рекомендації з підготовки приміщення для установки мебелі
+                    </li>
+                    <li class="consultation-request__item">
+                      Допоможемо з вибором матеріалів
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="consultation-request__form-col">
+                <div class="consultation-request__form-wrapper">
+                  <form id="consultationForm" class="consultation-request__form" action="" method="post">
+                    <span class="consultation-request__note">*&thinsp;Обов'язкове поле для заповнення</span>
+
+                    <label class="field-text">
+                      <span class="visually-hidden">Ім'я</span>
+                      <span class="field-text__input-wrap">
+                        <input id="target-field" class="field-text__input" type="text" name="name" value="" placeholder="Ім'я" required>
+                      </span>
+                      <span class="text-input__error"></span>
+                    </label>
+
+                    <div class="field-text">
+                      <span class="visually-hidden">Телефон</span>
+                      <span class="field-text__input-wrap">
+                        <input form="" class="field-text__input  phone-mask" type="tel" name="tel" value="" required>
+                      </span>
+                      <span class="text-input__error"></span>
+                    </div>
+
+                    <label class="field-text">
+                      <span class="visually-hidden">Email</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="email" name="email" value="" placeholder="Email">
+                      </span>
+                      <span class="text-input__error"></span>
+                    </label>
+
+                    <div class="field-actions">
+                      <input form="consultationForm" class="field-text__input field-text__input--submit" type="submit" name="" value="Замовити">
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+        <section class="work-stages">
+
+          <div class="container">
+            <h2 class="visually-hidden">Как мы работаем</h2>
+
+            <div class="row">
+              <div class="work-stages__col">
+
+                <ol class="row  work-stages__list">
+
+                  <li class="work-stages__item">
+                    <div class="work-stages__card">
+                      <span class="work-stages__num">01</span>
+                      <h4 class="work-stages__title">Безкоштовна консультація з нашими фахівцями</h4>
+                      <p>Зателефонуйте нам або залиште свій номер для отримання консультації</p>
+                    </div>
+                  </li>
+
+                  <li class="work-stages__item">
+                    <div class="work-stages__card">
+                      <span class="work-stages__num">02</span>
+                      <h4 class="work-stages__title">Безкоштовний проект в ПРО100</h4>
+                      <p>Наші дизайнери складуть проект з урахуванням всіх Ваших побажань</p>
+                    </div>
+                  </li>
+
+                  <li class="work-stages__item">
+                    <div class="work-stages__card">
+                      <span class="work-stages__num">03</span>
+                      <h4 class="work-stages__title">Безкоштовний замір за у мови підписання договору</h4>
+                      <p>Всі заміри проводять наші фахівці у зручний для Вас час</p>
+                    </div>
+                  </li>
+
+                  <li class="work-stages__item">
+                    <div class="work-stages__card">
+                      <span class="work-stages__num">04</span>
+                      <h4 class="work-stages__title">Виробництво Вашого проекту</h4>
+                      <p>Після укладання договору ми приступимо до роботи над Вашим проектом, срок виготовлення 28 робочих днів</p>
+                    </div>
+                  </li>
+
+                  <li class="work-stages__item">
+                    <div class="work-stages__card">
+                      <span class="work-stages__num">05</span>
+                      <h4 class="work-stages__title">Складання та доставка</h4>
+                      <p>Готові меблі ми доставимо і виконаємо установку в зручний для Вас час</p>
+                    </div>
+                  </li>
+
+                  <li class="work-stages__item">
+                    <div class="work-stages__card">
+                      <span class="work-stages__num">06</span>
+                      <h4 class="work-stages__title">Гарантія і постгарантійне обслуговування</h4>
+                      <p>Гарантія на меблі 18 місяців</p>
+                    </div>
+                  </li>
+
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="contact-block">
+          <div class="container">
+            <h2 class="visually-hidden">Контакты</h2>
+
+            <div class="row">
+
+              <div class="contact-block__col">
+                <div class="contact-card">
+                  <span class="contact-card__icon  contact-card__icon--call"></span>
+                  <div class="contact-card__text">
+                    <ul class="list-nostyled  contact-card__list">
+                      <li class="contact-card__item">
+                        <a href="tel:+380977029210" class="contact-card__link">+380 (97) 702 92 10</a>
+                      </li>
+                      <li class="contact-card__item">
+                        <a href="tel:+380977029210" class="contact-card__link">+380 (97) 702 92 10</a>
+                      </li>
+                      <li class="contact-card__item">
+                        <a href="tel:+380977029210" class="contact-card__link">+380 (97) 702 92 10</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-block__col">
+                <div class="contact-card">
+                  <span class="contact-card__icon  contact-card__icon--mail"></span>
+                  <div class="contact-card__text">
+                    <a href="mail:sofan.onlinesale@ukr.net" class="contact-card__link">
+                      sofan.onlinesale@ukr.net
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-block__col">
+                <div class="contact-card">
+                  <span class="contact-card__icon  contact-card__icon--location"></span>
+                  <div class="contact-card__text">
+                    <p>м. Біла Церква,<br> вул. Павліченко, 17</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+        <section class="map-block">
+
+          <div class="map-block__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2124.467356809824!2d30.131008006614273!3d49.79457986253004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d3420509200daf%3A0x147bc3413b513832!2z0YPQuy4g0J_QsNCy0LvQuNGH0LXQvdC60L4sIDE3LCDQkdC10LvQsNGPINCm0LXRgNC60L7QstGMLCDQmtC40LXQstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAwOTEwMA!5e0!3m2!1sru!2sua!4v1587396363460!5m2!1sru!2sua" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
+          </div>
+
+          <div class="container  map-block__inner">
+            <div class="row">
+
+              <div class="map-block__col-text">
+
+                <div class="map-block__text">
+
+                  <div class="map-block__schedule">
+                    <h4 class="h3  map-block__title">Графік роботи:</h4>
+                    <ul class="list-nostyled  page-footer__menu-list  page-footer__menu-list--worktime">
+                      <li class="page-footer__menu-item">
+                        <span>Пн-Пт: <strong>09:00–18:00</strong></span>
+                      </li>
+                      <li class="page-footer__menu-item">
+                        <span>Субота: <strong>09:00–14:00</strong></span>
+                      </li>
+                      <li class="page-footer__menu-item">
+                        <span>Неділя: <strong>вихідний день</strong></span>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                  <div class="map-block__socials">
+                    <h4 class="h3  map-block__title">Приєднуйся!</h4>
+                    <ul class="list-nostyled  socials  socials--map">
+                      <li class="socials__item">
+                        <a href="#" class="socials__link  socials__link--mess" target="_blank" rel="nofollow noopener"><span class="visually-hidden">Messenger</span></a>
+                      </li>
+                      <li class="socials__item">
+                        <a href="#" class="socials__link  socials__link--tg" target="_blank" rel="nofollow noopener"><span class="visually-hidden">Telegram</span></a>
+                      </li>
+                      <li class="socials__item">
+                        <a href="#" class="socials__link  socials__link--wapp" target="_blank" rel="nofollow noopener"><span class="visually-hidden">Whatsapp</span></a>
+                      </li>
+                      <li class="socials__item">
+                        <a href="#" class="socials__link  socials__link--vib" target="_blank" rel="nofollow noopener"><span class="visually-hidden">Viber</span></a>
+                      </li>
+                      <li class="socials__item">
+                        <a href="#" class="socials__link  socials__link--fb" target="_blank" rel="nofollow noopener"><span class="visually-hidden">Facebook</span></a>
+                      </li>
+                      <!-- <li class="socials__item">
+                        <a href="#" class="socials__link  socials__link--insta" target="_blank" rel="nofollow noopener"><span class="visually-hidden">Instagram</span></a>
+                      </li> -->
+                    </ul>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/drawer/drawer.html')
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
