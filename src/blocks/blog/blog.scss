@@ -1,0 +1,30 @@
+.blog {
+  padding-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 110px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__content {
+    @include col(xs,12);
+    @include col(md,10);
+    @include col(xl,9);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+      margin: 15px 0;
+    }
+  }
+}
