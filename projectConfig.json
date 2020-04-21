@@ -54,7 +54,8 @@
     "contact-block": [],
     "contact-card": [],
     "map-block": [],
-    "about-us": []
+    "about-us": [],
+    "blog": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
