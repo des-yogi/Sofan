@@ -1,0 +1,116 @@
+.news-article {
+  padding-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 110px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col-text {
+    @include col(xs,12);
+    @include col(md,6);
+    order: 1;
+
+    @media (min-width: $screen-md) {
+      order: 0;
+    }
+  }
+
+  &__col-img {
+    @include col(xs,12);
+    @include col(md,6);
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+
+  }
+
+  &__date-location {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__date,
+  &__location {
+    position: relative;
+    padding-left: 36px;
+
+    &::before {
+      position: absolute;
+      display: block;
+      //vertical-align: middle;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: 26px;
+      //margin-right: 10px;
+      transform: translateY(-3px);
+      background-color: transparent;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__date {
+    flex: 0 1 100%;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      flex-basis: auto;
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+
+    &::before {
+      background-image: svg-load('../blocks/sprite-svg/svg/calendar-icon.svg', fill=$text-color);
+    }
+  }
+
+  &__location {
+    flex: 1 1 100%;
+
+    @media (min-width: $screen-md) {
+      flex-basis: auto;
+    }
+
+    &::before {
+      background-image: svg-load('../blocks/sprite-svg/svg/map-pin-icon.svg', fill=$text-color);
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+  }
+
+  &__img {
+
+    img {
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
