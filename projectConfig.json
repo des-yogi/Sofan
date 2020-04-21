@@ -55,7 +55,10 @@
     "contact-card": [],
     "map-block": [],
     "about-us": [],
-    "blog": []
+    "blog": [],
+    "news-article": [],
+    "show-partners": [],
+    "show-gallery": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
