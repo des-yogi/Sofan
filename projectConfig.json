@@ -60,7 +60,9 @@
     "show-partners": [],
     "show-gallery": [],
     "how-to-sketch": [],
-    "works-gallery": []
+    "works-gallery": [],
+    "blog-list": [],
+    "subscription": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

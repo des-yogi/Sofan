@@ -1,0 +1,57 @@
+.blog-list {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .works-gallery__col {
+    @include col(sm,12);
+    @include col(md,6);
+    @include col(xl,4);
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    margin-top: 0;
+  }
+
+  &__item {
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &__card {
+    display: block;
+    height: 100%;
+    padding: 20px;
+    text-decoration: none;
+    color: $text-color;
+    background-color: $white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: $screen-md) {
+      padding: 30px 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 30px;
+    }
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__card-title {
+    margin-top: 0;
+  }
+
+  &__card-intro {
+
+  }
+}

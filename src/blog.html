@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Галерея работ</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <div class="container">
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+      </div>
+
+      <main class="main-content" role="main">
+
+        <div class="container">
+
+          <div class="works-gallery  blog-list">
+
+            <h1 class="works-gallery__title">Блог</h1>
+
+            <div class="works-gallery__gallery">
+              <ul class="row  blog-list__list">
+
+                <li class="works-gallery__col  blog-list__item">
+
+                  <a href="img/gallery-img-big.jpg" class="blog-list__card">
+                    <h3 class="blog-list__card-title">Як заміряти кухню?</h3>
+                    <p class="blog-list__card-intro">Розміри приміщення -довжина, висота, ширина. Розташування всіляких комунікацій, дверей, вікон, вентиляційних отворів, труб та інших...</p>
+                  </a>
+
+                </li>
+
+                <li class="works-gallery__col  blog-list__item">
+
+                  <a href="img/gallery-img-big.jpg" class="blog-list__card">
+                    <h3 class="blog-list__card-title">Як заміряти кухню?</h3>
+                    <p class="blog-list__card-intro">Розміри приміщення -довжина, висота, ширина. Розташування всіляких комунікацій, дверей, вікон, вентиляційних отворів, труб та інших... Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Одна силуэт, за не рукопись. </p>
+                  </a>
+
+                </li>
+
+                <li class="works-gallery__col  blog-list__item">
+
+                  <a href="img/gallery-img-big.jpg" class="blog-list__card">
+                    <h3 class="blog-list__card-title">Як заміряти кухню?</h3>
+                    <p class="blog-list__card-intro">Розміри приміщення -довжина, висота, ширина. Розташування всіляких комунікацій, дверей, вікон, вентиляційних отворів, труб та інших...</p>
+                  </a>
+
+                </li>
+
+                <li class="works-gallery__col  blog-list__item">
+
+                  <a href="img/gallery-img-big.jpg" class="blog-list__card">
+                    <h3 class="blog-list__card-title">Як заміряти кухню?</h3>
+                    <p class="blog-list__card-intro">Розміри приміщення -довжина, висота, ширина. Розташування всіляких комунікацій, дверей, вікон, вентиляційних отворів, труб та інших...</p>
+                  </a>
+
+                </li>
+
+                <li class="works-gallery__col  blog-list__item">
+
+                  <a href="img/gallery-img-big.jpg" class="blog-list__card">
+                    <h3 class="blog-list__card-title">Як заміряти кухню?</h3>
+                    <p class="blog-list__card-intro">Розміри приміщення -довжина, висота, ширина. Розташування всіляких комунікацій, дверей, вікон, вентиляційних отворів, труб та інших...</p>
+                  </a>
+
+                </li>
+
+              </ul>
+            </div>
+
+            @@include('blocks/pagination/pagination.html')
+
+          </div>
+
+        </div>
+
+        <section class="subscription">
+          <div class="container">
+
+            <h2 class="visually-hidden">Подписка на рассылку</h2>
+
+            <div class="row">
+
+              <div class="subscription__content">
+                <p class="h3  subscription__help">Підпишіться на розсилку нашого блогу, щоб отримувати корисні поради</p>
+                <form id="subscriptionForm" class="subscription__form" action="#" method="post">
+                  <div class="subscription__input-group">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="email" name="email" value="" placeholder="Email">
+                      </span>
+                    </label>
+                    <input class="btn" type="submit" name="subscriptionSubmit" value="Підписатись">
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+        <section class="consultation-request">
+
+          <div class="container">
+            <div class="row">
+
+              <div class="consultation-request__text-col">
+                <div class="consultation-request__text">
+                  <h2 class="consultation-request__title">Отримайте <span class="colored">безкоштовну</span> консультацію</h2>
+                  <ul class="consultation-request__list">
+                    <li class="consultation-request__item">
+                      Ми разом з вами складемо проект
+                    </li>
+                    <li class="consultation-request__item">
+                      Дамо рекомендації з підготовки приміщення для установки мебелі
+                    </li>
+                    <li class="consultation-request__item">
+                      Допоможемо з вибором матеріалів
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="consultation-request__form-col">
+                <div class="consultation-request__form-wrapper">
+                  <form id="consultationForm" class="consultation-request__form" action="" method="post">
+                    <span class="consultation-request__note">*&thinsp;Обов'язкове поле для заповнення</span>
+
+                    <label class="field-text">
+                      <span class="visually-hidden">Ім'я</span>
+                      <span class="field-text__input-wrap">
+                        <input id="target-field" class="field-text__input" type="text" name="name" value="" placeholder="Ім'я" required>
+                      </span>
+                      <span class="text-input__error"></span>
+                    </label>
+
+                    <div class="field-text">
+                      <span class="visually-hidden">Телефон</span>
+                      <span class="field-text__input-wrap">
+                        <input form="" class="field-text__input  phone-mask" type="tel" name="tel" value="" required>
+                      </span>
+                      <span class="text-input__error"></span>
+                    </div>
+
+                    <label class="field-text">
+                      <span class="visually-hidden">Email</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="email" name="email" value="" placeholder="Email">
+                      </span>
+                      <span class="text-input__error"></span>
+                    </label>
+
+                    <div class="field-actions">
+                      <input form="consultationForm" class="field-text__input field-text__input--submit" type="submit" name="" value="Замовити">
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/drawer/drawer.html')
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
