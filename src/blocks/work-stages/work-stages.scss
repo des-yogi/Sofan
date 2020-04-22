@@ -75,4 +75,31 @@
   &__title {
     margin-top: 0;
   }
+
+  &--sketch {
+    padding-top: 50px;
+    background-color: $white;
+
+    @media (min-width: $screen-md) {
+      padding-top: 50px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 110px;
+    }
+
+    #{$block-name}__col {
+      @include col(xs,12);
+      @include col-offset(md,0);
+      @include col(md,12);
+    }
+
+    #{$block-name}__card {
+      font-size: unset;
+
+      p {
+        font-weight: unset;
+      }
+    }
+  }
 }
