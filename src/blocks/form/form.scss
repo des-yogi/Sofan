@@ -22,12 +22,15 @@ $line-height:                 1.375em !default;
   &__legend {
     display: block;
     width: 100%;
-    margin-top: $line-height;
-    margin-bottom: 0.5em;
-    font-size: $font-size;
-    font-family: $font-family;
-    font-weight: 700;
-    line-height: $line-height;
+    //font-size: $font-size;
+    //font-family: $font-family;
+    //font-weight: 500;
+    //line-height: $line-height;
     color: currentColor;
+
+    &.h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
   }
 }

@@ -34,9 +34,24 @@
   }
 
   &__price {
-    display: block;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
     margin-bottom: 25px;
     font-size: 18px;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 8px;
+      background-color: $price-underline;
+    }
   }
 
   &__btn {
