@@ -59,7 +59,8 @@
     "news-article": [],
     "show-partners": [],
     "show-gallery": [],
-    "how-to-sketch": []
+    "how-to-sketch": [],
+    "works-gallery": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
