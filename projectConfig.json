@@ -62,7 +62,8 @@
     "how-to-sketch": [],
     "works-gallery": [],
     "blog-list": [],
-    "subscription": []
+    "subscription": [],
+    "page-404": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

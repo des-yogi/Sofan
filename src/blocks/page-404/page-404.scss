@@ -1,0 +1,39 @@
+.page-404 {
+  padding: 60px 0;
+  text-align: center;
+
+  @media (min-width: $screen-md) {
+    padding: 70px 0;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 110px 0;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .btn {
+    width: 290px;
+  }
+
+  &__col {
+    @include col(xs,12);
+    @include col-offset(md,1);
+    @include col(md,10);
+    @include col-offset(lg,2);
+    @include col(lg,8);
+  }
+
+  &__img {
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 60px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
