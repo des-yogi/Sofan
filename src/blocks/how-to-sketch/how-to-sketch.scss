@@ -1,0 +1,101 @@
+.how-to-sketch {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__intro-col {
+    @include col(xs,12);
+    @include col(md,10);
+    @include col(xl,9);
+  }
+
+  &__intro {
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__intro-descr {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.4em;
+  }
+
+  &__tools {
+
+  }
+
+  &__subtitle {
+    margin-top: 0;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @media (min-width: $screen-md) {
+        margin-right: 0;
+      }
+    }
+
+    span::before {
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      transform: translateY(-2px);
+      background-color: transparent;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &--pencil {
+
+      span::before {
+        background-image: svg-load('../blocks/how-to-sketch/bg-img/pencil-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--papers {
+
+      span::before {
+        background-image: svg-load('../blocks/how-to-sketch/bg-img/papers-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--tape {
+
+      span::before {
+        background-image: svg-load('../blocks/how-to-sketch/bg-img/tape-icon.svg', fill=$main-color);
+      }
+    }
+  }
+}
