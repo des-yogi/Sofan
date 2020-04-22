@@ -1,0 +1,37 @@
+.works-gallery {
+  padding-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 110px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs,12);
+    @include col(sm,6);
+    @include col(lg,4);
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__amount {
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  &__img {
+
+    img {
+      display: block;
+    }
+  }
+}
