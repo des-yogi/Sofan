@@ -1,0 +1,69 @@
+.subscription {
+  padding-top: 0;
+  padding-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 50px;
+    padding-bottom: 110px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__content {
+    @include col(xs,12);
+    @include col-offset(lg,1);
+    @include col(lg,10);
+    @include col-offset(xl,2);
+    @include col(xl,8);
+    text-align: center;
+  }
+
+  &__help {
+    margin: 0 0 30px;
+
+    @media (min-width: $screen-md) {
+      width: 75%;
+      margin: 0 auto 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__form {
+
+  }
+
+  &__input-group {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .field-text {
+
+      @media (min-width: $screen-md) {
+        flex: 1 1 61%;
+        margin-bottom: 0;
+        margin-right: 30px;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      height: 48px;
+
+      @media (min-width: $screen-md) {
+        flex: 1 1 auto;
+        width: auto;
+      }
+    }
+  }
+}
