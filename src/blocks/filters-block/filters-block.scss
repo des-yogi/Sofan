@@ -1,9 +1,76 @@
-// В этом файле должны быть стили для БЭМ-блока filters-block, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .filters-block {
+  position: sticky;
+  top: 0;
+  border: 2px solid $border-color;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+
+  }
+
+  &__form {
+
+  }
+
+  &__form-action {
+    padding: 20px 16px;
+    border-bottom: 2px solid $border-color;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &__fieldset-wrapper {
+    padding: 30px 16px;
+  }
+
+  &__reset {
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: left;
+    color: inherit;
+    background-color: $white;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+
+    &::after {
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      width: 14px;
+      height: 14px;
+      margin-left: 15px;
+      background-color: transparent;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: svg-load('../blocks/sprite-svg/svg/reset-icon.svg', fill=$text-color);
+    }
+
+    &:hover,
+    &:focus {
+      color: $link-color--hover;
+      outline: none;
+
+      &::after {
+        background-image: svg-load('../blocks/sprite-svg/svg/reset-icon.svg', fill=$link-color--hover);
+      }
+    }
+  }
+
+  &__form-info {
+    margin-bottom: 5px;
+    font-size: 12px;
+    text-align: center;
+    color: $text-muted;
+  }
 }

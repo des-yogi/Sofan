@@ -98,4 +98,37 @@
     background-color: #000;
     user-select: none;
   }
+
+  &--filter {
+
+    .filters-block {
+      border: none;
+    }
+
+    .filters-block__form {
+      position: relative;
+    }
+
+    .filters-block__form-action {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      padding-top: 0;
+      border-bottom: none;
+      background-color: $white;
+
+      @media (min-width: $screen-md) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+
+    .filters-block__fieldset-wrapper {
+
+      @media (min-width: $screen-md) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
 }

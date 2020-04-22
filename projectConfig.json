@@ -63,7 +63,8 @@
     "works-gallery": [],
     "blog-list": [],
     "subscription": [],
-    "page-404": []
+    "page-404": [],
+    "seo-text": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

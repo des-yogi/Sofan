@@ -12,6 +12,7 @@
   $block-name:                &; // #{$block-name}__element
 
   &__filter-col {
+    position: relative;
     @include col(xl,3);
     display: none;
 
@@ -40,22 +41,47 @@
     }
   }
 
-  &__gallery {
-
-  }
-
-  &__fltr-btn-wrapper {
+  &__sticker-wrapper {
     position: relative;
     z-index: 5;
     margin-bottom: 30px;
+  }
+
+  &__fltr-btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 5;
     background-color: $white;
 
-    @media (min-width: $screen-xl) {
-      display: none;
+    h1 {
+      width: 100%;
+      margin-bottom: 20px;
+
+      @media (min-width: $screen-md) {
+        flex: 1 0 auto;
+        width: auto;
+        margin-bottom: 0;
+      }
     }
 
     button {
       width: 100%;
+      font-size: 18px;
+      //border-color: $white;
+
+      @media (min-width: $screen-md) {
+        flex: 0 0 auto;
+        width: auto;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      @media (min-width: $screen-xl) {
+        display: none;
+      }
 
       &::before {
         display: inline-block;
