@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Страница не найдена</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main-content" role="main">
+
+        <div class="container">
+
+          <div class="page-404">
+            <div class="row">
+              <div class="page-404__col">
+                <div class="page-404__img">
+                  <picture>
+                    <source data-srcset="img/page-404.png" media="(min-width: 768px)">
+                    <!-- 736x310 Оригинальный размер (не обрабатывать!) -->
+                    <source data-srcset="img/page-404.png" media="(min-width: 480px)">
+                    <!-- 568x239 -->
+                    <img class="b-lazy" data-src="img/page-404.png" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Фото" width="450" height="190">
+                  </picture>
+                </div>
+                <h1>Сторінка не знайдена</h1>
+                <a href="index.html" class="btn">На головну</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/drawer/drawer.html')
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
