@@ -97,6 +97,7 @@
     }
 
     &::before {
+      background-size: 18px 26px;
       background-image: svg-load('../blocks/sprite-svg/svg/map-pin-icon.svg', fill=$text-color);
     }
   }

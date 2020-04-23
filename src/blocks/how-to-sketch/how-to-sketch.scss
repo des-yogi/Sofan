@@ -94,6 +94,7 @@
     &--tape {
 
       span::before {
+        background-size: 24px 21px;
         background-image: svg-load('../blocks/how-to-sketch/bg-img/tape-icon.svg', fill=$main-color);
       }
     }
