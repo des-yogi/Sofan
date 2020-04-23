@@ -75,7 +75,7 @@
     }
 
     &--vib {
-      background-size: contain;
+      background-size: 23px 24px;
       background-image: svg-load('../blocks/socials/bg-img/viber-icon.svg', fill=$link-color);
 
       &:hover,
@@ -154,7 +154,7 @@
       }
 
       &--vib {
-        background-size: contain;
+        background-size: 23px 24px;
         background-image: svg-load('../blocks/socials/bg-img/viber-icon.svg', fill=$white);
 
         &:hover,
@@ -228,7 +228,7 @@
       }
 
       &--vib {
-        background-size: contain;
+        background-size: 23px 24px;
         background-image: svg-load('../blocks/socials/bg-img/viber-icon.svg', fill=$text-color);
 
         &:hover,
