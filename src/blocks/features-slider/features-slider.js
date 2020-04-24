@@ -3,7 +3,7 @@ $(document).ready(function(){
   $('.features-slider__row').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     asNavFor: '.features-slider__nav'
   });
 

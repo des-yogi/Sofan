@@ -2,6 +2,10 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  .suite-card__wrapper {
+    margin-bottom: 20px;
+  }
+
   &__title {
     position: relative;
     z-index: 5;
@@ -120,9 +124,220 @@
     }
   }
 
+  &__main {
+    margin-bottom: 50px;
+  }
+
+  &__slider-col {
+    @include col(xs,12);
+    @include col(xl,7);
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__options-col {
+    @include col(xs,12);
+    @include col(xl,5);
+  }
+
+  &__action-col {
+    @include col(xs,12);
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-xl) {
+      flex: 0 0 auto;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__table-col,
+  &__opt-col {
+    @include col(xs,12);
+    @include col(md,6);
+    @include col(xl,12);
+  }
+
+  &__table-col {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex: 0 0 auto;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: auto;
+    }
+  }
+
+  &__opt-col {
+
+    @media (min-width: $screen-xl) {
+      flex: 0 0 auto;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__options {
+
+    @media (min-width: $screen-xl) {
+      height: 100%;
+    }
+
+    & > .row {
+
+      @media (min-width: $screen-xl) {
+        flex-direction: column;
+        height: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    @media (min-width: $screen-md) {
+      width: calc(50% - 15px);
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 100%;
+    }
+
+    .btn {
+      width: calc(50% - 15px);
+      min-width: 160px;
+    }
+  }
+
+  &__action-price {
+    margin: 0;
+  }
+
+  &__table {
+    height: 100%;
+    margin: 0;
+    border: none;
+    background-color: $light-bg;
+
+    tr {
+
+      &:first-child {
+
+        td {
+          padding-top: 15px;
+
+          @media (min-width: $screen-xl) {
+            padding-top: 20px;
+          }
+        }
+      }
+
+      &:last-child {
+
+        td {
+          padding-bottom: 15px;
+
+          @media (min-width: $screen-xl) {
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    td {
+      padding-top: 7.5px;
+      padding-bottom: 7.5px;
+      border: none !important;
+
+      &:nth-child(even) {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    min-height: 50px;
+    padding-left: 55px !important;
+    margin-bottom: 1em;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 30px;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--color {
+
+      &::after {
+        background-size: 35px 41px;
+        background-image: svg-load('../blocks/features/bg-img/palette-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--time {
+
+      &::after {
+        background-size: 35px 25px;
+        background-image: svg-load('../blocks/features/bg-img/timer-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--service {
+
+      &::after {
+        background-size: 35px 35px;
+        background-image: svg-load('../blocks/features/bg-img/service-icon.svg', fill=$main-color);
+      }
+    }
+  }
+
   &__details {
-    padding: 30px 0;
-    background-color: $tabs-bg;
+    margin-bottom: 50px;
+    //padding: 30px 0;
+    //background-color: $tabs-bg;
+  }
+
+  &__details-caption {
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 
   &__details-list {
@@ -180,108 +395,31 @@
   }
 
   &__info {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    margin-bottom: 60px;
 
     @media (min-width: $screen-md) {
-      padding-top: 70px;
-      padding-bottom: 70px;
+      margin-bottom: 70px;
     }
 
     @media (min-width: $screen-xl) {
-      padding-top: 110px;
-      padding-bottom: 110px;
+      margin-bottom: 110px;
     }
+  }
+
+  &__info-title {
+    margin-top: 0;
   }
 
   &__text-col {
     @include col(xs,12);
-    @include col(xl,7);
-    margin-bottom: 30px;
-
-    @media (min-width: $screen-xl) {
-      margin-bottom: 0;
-    }
-  }
-
-  &__list-col {
-    @include col(xs,12);
-    @include col-offset(xl,1);
-    @include col(xl,4);
+    //@include col(md,11);
+    @include col(xl,8);
   }
 
   &__text {
 
-    *:first-child {
-      margin-top: 0 !important;
-    }
-  }
-
-  &__list {
-
-    @media (min-width: $screen-md) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    @media (min-width: $screen-xl) {
-      display: block;
-    }
-  }
-
-  &__list-item {
-    position: relative;
-    padding-left: 50px !important;
-    margin-bottom: 1em;
-
-    @media (min-width: $screen-md) {
-      width: calc(50% - 15px);
-    }
-
-    @media (min-width: $screen-xl) {
-      width: 100%;
-    }
-
-    &::after {
-      display: block;
-      content: "";
-      position: absolute;
-      top: 3px;
-      left: 0;
-      width: 35px;
-      height: 35px;
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-position: left top;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    &--color {
-
-      &::after {
-        background-size: 28px 33px;
-        background-image: svg-load('../blocks/features/bg-img/palette-icon.svg', fill=$main-color);
-      }
-    }
-
-    &--time {
-
-      &::after {
-        background-size: 35px 25px;
-        background-image: svg-load('../blocks/features/bg-img/timer-icon.svg', fill=$main-color);
-      }
-    }
-
-    &--service {
-
-      &::after {
-        background-size: 27px 24px;
-        background-image: svg-load('../blocks/features/bg-img/service-icon.svg', fill=$main-color);
-      }
+    p:first-child {
+      margin-top: 0;
     }
   }
 }

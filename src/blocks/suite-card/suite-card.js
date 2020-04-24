@@ -65,9 +65,11 @@
         });
       });
 
-      numInput.addEventListener('change', changeFieldHandler);
-    });
+      if (numInput) {
+        numInput.addEventListener('change', changeFieldHandler);
+      }
 
+    });
   }
 
 }());
