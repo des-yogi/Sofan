@@ -111,69 +111,7 @@
           </div>
         </section>
 
-        <section class="consultation-request">
-
-          <div class="container">
-            <div class="row">
-
-              <div class="consultation-request__text-col">
-                <div class="consultation-request__text">
-                  <h2 class="consultation-request__title">Отримайте <span class="colored">безкоштовну</span> консультацію</h2>
-                  <ul class="consultation-request__list">
-                    <li class="consultation-request__item">
-                      Ми разом з вами складемо проект
-                    </li>
-                    <li class="consultation-request__item">
-                      Дамо рекомендації з підготовки приміщення для установки мебелі
-                    </li>
-                    <li class="consultation-request__item">
-                      Допоможемо з вибором матеріалів
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="consultation-request__form-col">
-                <div class="consultation-request__form-wrapper">
-                  <form id="consultationForm" class="consultation-request__form" action="" method="post">
-                    <span class="consultation-request__note">*&thinsp;Обов'язкове поле для заповнення</span>
-
-                    <label class="field-text">
-                      <span class="visually-hidden">Ім'я</span>
-                      <span class="field-text__input-wrap">
-                        <input id="target-field" class="field-text__input" type="text" name="name" value="" placeholder="Ім'я" required>
-                      </span>
-                      <span class="text-input__error"></span>
-                    </label>
-
-                    <div class="field-text">
-                      <span class="visually-hidden">Телефон</span>
-                      <span class="field-text__input-wrap">
-                        <input form="" class="field-text__input  phone-mask" type="tel" name="tel" value="" required>
-                      </span>
-                      <span class="text-input__error"></span>
-                    </div>
-
-                    <label class="field-text">
-                      <span class="visually-hidden">Email</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="email" name="email" value="" placeholder="Email">
-                      </span>
-                      <span class="text-input__error"></span>
-                    </label>
-
-                    <div class="field-actions">
-                      <input form="consultationForm" class="field-text__input field-text__input--submit" type="submit" name="" value="Замовити">
-                    </div>
-
-                  </form>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </section>
+        @@include('blocks/consultation-request/consultation-request.html')
 
       </main>
 

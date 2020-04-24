@@ -6,12 +6,18 @@
     padding: 70px 0;
   }
 
+  @media (min-width: $screen-xl) {
+    padding: 110px 0;
+  }
+
   $block-name:                &; // #{$block-name}__element
 
   &__col {
     @include col(xs,12);
     @include col-offset(md,1);
     @include col(md,10);
+    @include col-offset(xl,0);
+    @include col(xl,12);
   }
 
   &__list {
@@ -23,8 +29,12 @@
   &__item {
     @include col(xs,12);
     @include col(md,6);
-    @include col(xl,4);
+    @include col(xl,3);
     margin-bottom: 50px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
 
     &:nth-last-child(1) {
       margin-bottom: 0;
@@ -37,17 +47,17 @@
       }
     }
 
-    &:nth-last-child(3) {
+    // &:nth-last-child(3) {
 
-      @media (min-width: $screen-xl) {
-        margin-bottom: 0;
-      }
-    }
+    //   @media (min-width: $screen-xl) {
+    //     margin-bottom: 0;
+    //   }
+    // }
   }
 
   &__card {
     position: relative;
-    padding-left: 57px;
+    padding-left: 54px;
     font-size: 14px;
 
     p {
@@ -57,18 +67,35 @@
 
   &__num {
     position: absolute;
-    top: 5px;
+    top: 5;
     left: 0;
+    width: 50px;
+    height: 50px;
     font-size: 35px;
     white-space: nowrap;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
 
-    &::after {
-      display: block;
-      content: ".";
-      position: absolute;
-      bottom: -1px;
-      right: -9px;
-      color: inherit;
+    &--roulette {
+      background-size: 40px 30px;
+      background-image: svg-load('../blocks/work-stages/bg-img/roulette-icon.svg', fill=$text-color);
+    }
+
+    &--drill {
+      background-size: 40px 23px;
+      background-image: svg-load('../blocks/work-stages/bg-img/drill-icon.svg', fill=$text-color);
+    }
+
+    &--packing {
+      background-size: 40px 35px;
+      background-image: svg-load('../blocks/work-stages/bg-img/packing-icon.svg', fill=$text-color);
+    }
+
+    &--guarantee {
+      background-size: 36px 40px;
+      background-image: svg-load('../blocks/work-stages/bg-img/guarantee-icon.svg', fill=$text-color);
     }
   }
 
@@ -85,6 +112,7 @@
     }
 
     @media (min-width: $screen-xl) {
+      padding-top: 50px;
       padding-bottom: 110px;
     }
 
@@ -94,11 +122,37 @@
       @include col(md,12);
     }
 
+    #{$block-name}__item {
+      @include col(xl,4);
+      margin-bottom: 50px;
+
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+
     #{$block-name}__card {
       font-size: unset;
 
       p {
         font-weight: unset;
+      }
+    }
+
+    #{$block-name}__num {
+      background: none;
+
+      & > span {
+      position: absolute;
+
+        &::after {
+          display: block;
+          content: ".";
+          position: absolute;
+          bottom: -1px;
+          right: -9px;
+          color: inherit;
+        }
       }
     }
   }

@@ -1,41 +1,46 @@
 .contact-card {
   height: 100%;
+  min-height: 305px;
+  max-width: 310px;
   padding: 50px 40px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  border: 2px solid $border-color;
+  //border: 2px solid $border-color;
+  box-shadow: 0 7px 15px rgba(138, 149, 158, 0.2);
 
   @media (min-width: $screen-md) {
+    max-width: 335px;
     padding-top: 65px;
     padding-bottom: 65px;
   }
-
-  @media (min-width: $screen-xl) {}
 
   $block-name:                &; // #{$block-name}__element
 
   &__icon {
     display: inline-block;
     vertical-align: top;
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px;
-    background-color: transparent;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+    background-color: $main-color;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 50%;
 
     &--call {
       background-size: 47px 47px;
-       background-image: svg-load('../blocks/contact-card/bg-img/call-icon.svg', fill=$text-color);
+      background-image: svg-load('../blocks/contact-card/bg-img/call-icon.svg', fill=$white);
     }
 
     &--mail {
       background-size: 47px 32px;
-      background-image: svg-load('../blocks/contact-card/bg-img/mail-icon.svg', fill=$text-color);
+      background-image: svg-load('../blocks/contact-card/bg-img/mail-icon.svg', fill=$white);
     }
 
     &--location {
       background-size: 47px 47px;
-      background-image: svg-load('../blocks/contact-card/bg-img/location-icon.svg', fill=$text-color);
+      background-image: svg-load('../blocks/contact-card/bg-img/location-icon.svg', fill=$white);
     }
   }
 

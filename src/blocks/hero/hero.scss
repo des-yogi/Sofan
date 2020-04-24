@@ -60,7 +60,7 @@
 
     @media (min-width: $screen-xl) {
       padding-top: 80px;
-      text-align: initial;
+      text-align: left;
     }
 
     @media (min-width: 1920px) {
@@ -104,7 +104,7 @@
     align-items: center;
 
     @media (min-width: $screen-xl) {
-      justify-content: initial;
+      justify-content: flex-start;
     }
 
     a {

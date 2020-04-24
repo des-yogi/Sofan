@@ -19,6 +19,11 @@
     @include col-offset(md,0);
     @include col(md,12);
     @include col(xl,5);
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__form-col {
@@ -33,15 +38,12 @@
     @include col(xl,6);
   }
 
-  &__text {
-
-  }
-
   &__title {
     margin-top: 0;
     text-align: center;
 
     @media (min-width: $screen-xl) {
+      margin-bottom: 1em;
       text-align: left;
     }
   }
@@ -100,6 +102,23 @@
 
     @media (min-width: $screen-xl) {
       color: $white;
+    }
+  }
+
+  &__socials-wrapper {
+    margin-top: 20px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 40px;
+    }
+  }
+
+  &__socials-help {
+    display: block;
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      display: none;
     }
   }
 }
