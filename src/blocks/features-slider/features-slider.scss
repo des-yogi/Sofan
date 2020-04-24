@@ -1,5 +1,5 @@
 .features-slider {
-  margin-bottom: 30px;
+  //margin-bottom: 30px;
 
   $block-name:                &; // #{$block-name}__element
 
@@ -11,6 +11,8 @@
     @include col(xs,12);
     @include col-offset(sm,1);
     @include col(sm,10);
+    @include col-offset(xl,0);
+    @include col(xl,12);
     padding: 0 15px;
 
     @media (min-width: $screen-md) {
