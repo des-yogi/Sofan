@@ -64,7 +64,8 @@
     "blog-list": [],
     "subscription": [],
     "page-404": [],
-    "seo-text": []
+    "seo-text": [],
+    "invite-block": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

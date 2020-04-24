@@ -31,7 +31,7 @@
 
     &:hover,
     &:focus {
-      background-color: $white;
+      //background-color: $white;
     }
 
     &--mess {
@@ -106,11 +106,11 @@
       color: $main-color;
       background-position: center;
       background-repeat: no-repeat;
-      background-color: transparent;
+      //background-color: transparent;
 
       &:hover,
       &:focus {
-        background-color: transparent;
+        //background-color: transparent;
       }
 
       &--mess {
@@ -180,11 +180,11 @@
     #{$block-name}__link {
       background-position: center;
       background-repeat: no-repeat;
-      background-color: transparent;
+      //background-color: transparent;
 
       &:hover,
       &:focus {
-        background-color: transparent;
+        //background-color: transparent;
       }
 
       &--mess {
@@ -244,6 +244,78 @@
         &:hover,
         &:focus {
           background-image: svg-load('../blocks/socials/bg-img/instagram-icon.svg', fill=$link-color--hover);
+        }
+      }
+    }
+  }
+
+  &--ongreen-xl {
+    justify-content: center;
+    margin-top: 20px;
+
+
+    #{$block-name}__link {
+
+      @media (min-width: $screen-xl) {
+
+        &--mess {
+          background-size: contain;
+          background-image: svg-load('../blocks/socials/bg-img/messenger-icon.svg', fill=$text-color);
+
+          &:hover,
+          &:focus {
+            background-image: svg-load('../blocks/socials/bg-img/messenger-icon.svg', fill=$white);
+          }
+        }
+
+        &--fb {
+          background-size: contain;
+          background-image: svg-load('../blocks/socials/bg-img/facebook-icon.svg', fill=$text-color);
+
+          &:hover,
+          &:focus {
+            background-image: svg-load('../blocks/socials/bg-img/facebook-icon.svg', fill=$white);
+          }
+        }
+
+        &--tg {
+          background-size: contain;
+          background-image: svg-load('../blocks/socials/bg-img/telegram-icon.svg', fill=$text-color);
+
+          &:hover,
+          &:focus {
+            background-image: svg-load('../blocks/socials/bg-img/telegram-icon.svg', fill=$white);
+          }
+        }
+
+        &--wapp {
+          background-size: contain;
+          background-image: svg-load('../blocks/socials/bg-img/whatsapp-icon.svg', fill=$text-color);
+
+          &:hover,
+          &:focus {
+            background-image: svg-load('../blocks/socials/bg-img/whatsapp-icon.svg', fill=$white);
+          }
+        }
+
+        &--vib {
+          background-size: 23px 24px;
+          background-image: svg-load('../blocks/socials/bg-img/viber-icon.svg', fill=$text-color);
+
+          &:hover,
+          &:focus {
+            background-image: svg-load('../blocks/socials/bg-img/viber-icon.svg', fill=$white);
+          }
+        }
+
+        &--insta {
+          background-size: contain;
+          background-image: svg-load('../blocks/socials/bg-img/instagram-icon.svg', fill=$text-color);
+
+          &:hover,
+          &:focus {
+            background-image: svg-load('../blocks/socials/bg-img/instagram-icon.svg', fill=$white);
+          }
         }
       }
     }
