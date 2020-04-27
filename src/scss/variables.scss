@@ -98,6 +98,13 @@ $field-padding-horizontal:    15px;
 $border-radius:               0;
 $opacity:                     0.7;
 $transition-time:             0.2s;
+
+$enable-transitions:          true !default;
+$enable-prefers-reduced-motion-media-query:   true !default;
+$transition-base:             all .2s ease-in-out !default;
+$transition-fade:             opacity .15s linear !default;
+$transition-collapse:         height .35s ease !default;
+
 $shadow:                      5px 10px 40px rgba(16, 112, 177, 0.2);
 
 $menu-desktop-width:          $screen-xl;

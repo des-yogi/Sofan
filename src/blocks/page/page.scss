@@ -160,26 +160,48 @@ a {
 }
 
 // BS4 Хелперы для BS4 табов и т.п.
-.fade {
-  transition: opacity 0.15s linear;
-}
+// .fade {
+//   transition: opacity 0.15s linear;
+// }
 
-@media (prefers-reduced-motion: reduce) {
-  .fade {
-    transition: none;
+// @media (prefers-reduced-motion: reduce) {
+//   .fade {
+//     transition: none;
+//   }
+// }
+
+// .fade:not(.show) {
+//   opacity: 0;
+// }
+
+// .collapse {
+//   transition: all 0.3s ease-out;
+// }
+
+// .collapse:not(.show) {
+//   display: none;
+// }
+
+
+.fade {
+  @include transition($transition-fade);
+
+  &:not(.show) {
+    opacity: 0;
   }
 }
 
-.fade:not(.show) {
-  opacity: 0;
-}
-
 .collapse {
-  transition: all 0.3s ease-out;
+  &:not(.show) {
+    display: none;
+  }
 }
 
-.collapse:not(.show) {
-  display: none;
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  @include transition($transition-collapse);
 }
 
 .visually-hidden {

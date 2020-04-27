@@ -34,3 +34,20 @@
    image-rendering: -moz-crisp-edges; /* Firefox */
    -ms-interpolation-mode: nearest-neighbor; /* IE */
 }
+
+// stylelint-disable property-blacklist
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    @if length($transition) == 0 {
+      transition: $transition-base;
+    } @else {
+      transition: $transition;
+    }
+  }
+
+  @if $enable-prefers-reduced-motion-media-query {
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+}
