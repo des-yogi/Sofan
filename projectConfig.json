@@ -65,7 +65,8 @@
     "subscription": [],
     "page-404": [],
     "seo-text": [],
-    "invite-block": []
+    "invite-block": [],
+    "delivery-payment": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
