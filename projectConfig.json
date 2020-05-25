@@ -66,7 +66,10 @@
     "page-404": [],
     "seo-text": [],
     "invite-block": [],
-    "delivery-payment": []
+    "delivery-payment": [],
+    "sizes-block": [],
+    "option-block": [],
+    "options": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
