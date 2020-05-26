@@ -1,0 +1,29 @@
+.options {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include col(xs,12);
+    @include col(md,10);
+    @include col(xl,12);
+  }
+
+  &__col {
+    @include col(xs,12);
+    @include col(md,12);
+    @include col(xl,6);
+    margin-bottom: 40px;
+
+    &:last-child {
+      //margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 60px;
+    }
+  }
+}
