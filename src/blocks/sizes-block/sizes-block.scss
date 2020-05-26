@@ -58,8 +58,11 @@
     margin-top: 0;
   }
 
-  &__subtitle {
+  &__title {
 
+    @media (min-width: $screen-md) {
+      margin-bottom: 20px;
+    }
   }
 
   &__table {

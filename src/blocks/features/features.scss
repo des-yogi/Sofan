@@ -51,6 +51,7 @@
     border-bottom: 4px solid $green-bg;
 
     @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
       background: none;
       border-bottom: none;
     }

@@ -4783,6 +4783,8 @@ textarea.field-text__input {
                 align-items: center; }
         .sizes-block__col-inner + .sizes-block__col-inner {
           margin-top: 0; }
+    .sizes-block__title {
+      margin-bottom: 20px; }
     .option-block__col-img {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 50%;
@@ -5059,6 +5061,7 @@ textarea.field-text__input {
       width: 250px;
       margin-left: 70px; }
     .features__nav {
+      margin-bottom: 40px;
       background: none;
       border-bottom: none; }
     .features__nav-list {
