@@ -69,7 +69,8 @@
     "delivery-payment": [],
     "sizes-block": [],
     "option-block": [],
-    "options": []
+    "options": [],
+    "top-banner": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -1,0 +1,67 @@
+.top-banner {
+  display: flex;
+  justify-content: center;
+  min-height: 40px;
+  font-size: $font-size;
+  font-weight: 500;
+  text-decoration: none;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__text {
+    display: inline-flex;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+
+    &::before,
+    &::after {
+      flex: 0 0 16px;
+      content: "";
+      width: 16px;
+      height: 17px;
+      transform: translateY(-1px);
+      background-color: transparent;
+      background-size: 16px 17px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKPSURBVHgBnZLdSxRRGMafM1+7M+vsrrs7q1nkB22tyyohlpRYYhRRQUKY/Ql1pwQiFN2GEXsjhAhRUHddVNCtF0XeZJZRqREkafRB6e62O7s7M845nU0SzI+gczPvnPO+v/d53nOALZbV0dRd6E7s3ypH2OrQdvKK4pXGza6GC/8FEHyCLSq6pBqVN/Jd9df/CUj39QX/xLkjbQlC3XNIeEFqw9BCnou59tj5TQGMMVKxONdfjrP9/SFFS495E7W9CIhAPQUxKiBbS1dZT4+4IWD57NF2gWZi5Zi+enhaDnurSZ0GKASQKKByiFgM4uAJfUMADe/MODa5Uo4VmjlDogEgRFeKycqXQrChhe3vQ0P6OoAzPUHoknny948s1MPgnXUGGDwlKHGPHgiWgPTTOxHt8f2BdQDgy6ASE3qXjiebRYkY0F2ugG8bvNij8EwdSiyu+Beez2LhzeBCKqWuAlhnpwSpdFj0ZQ/4o86U0lBjwODnQQ/3wwHeMsgCAkWIFUUV1JS0u6OHVgGTu3PEzZeqWHEeYmSZkEY+vCivCvkAP7cb5Ar2cEstDiBa4MZgf/voXwW0jk46rq0/c7JFIJYF4jbvKINV1vLhNgE1/Hns4EoMBlaw4Niig7rk9JoZyIHo5cJnBiqbfHhcbqQaTNsHpraDhvZyFTJQaaEUL8GR9ZFt4xNv1wDEtmPvSaTulp3m3dUCqK+Zb8ZBhO1gYiOgCWA0C9uKjJFdHZfW3YJ2bfiTannmrA+MuYtf+b3OgDLunREQ9gMs+xrWlJkXHe+TSEuLic1WZiDZao6EH7gvoj+d3G3HLrzM0/nOGfdRVSqfijf9nU82A7HZm3rRehdQA6dc5IcXSfKevVHeL9UI52phPuGFAAAAAElFTkSuQmCC");
+    }
+
+    &::before {
+      margin-right: 10px;
+    }
+
+    &::after {
+      margin-left: 10px;
+    }
+
+    & > span {
+      transform: translateY(1px);
+    }
+  }
+
+  &__left-img,
+  &__right-img {
+    height: 40px;
+    width: 200px;
+    background-color: rgba($white, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (max-width: $screen-lg - 1) {
+      display: none;
+    }
+  }
+
+  &__left-img {
+    margin-right: 16px;
+    background-position: right bottom;
+  }
+
+  &__right-img {
+    margin-left: 16px;
+    background-position: left bottom;
+  }
+}
