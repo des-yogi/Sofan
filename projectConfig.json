@@ -70,7 +70,10 @@
     "sizes-block": [],
     "option-block": [],
     "options": [],
-    "top-banner": []
+    "top-banner": [],
+    "payment-logos": [],
+    "main-menu": [],
+    "links-tab": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -3,38 +3,102 @@
   $block-name:                &; // #{$block-name}__element
 
   &__list {
+    padding: 0 30px 0 40px;
     margin-bottom: 50px;
+  }
+
+  &__sublist {
+
+    #{$block-name}__link {
+      padding: 12px 0;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #{$block-name}__link {
+      flex: 1 1 auto;
+      margin-right: 36px;
+    }
+  }
+
+  &__btn {
+    flex: 0 0 40px;
+    display: block;
+    width: 40px;
+    height: 32px;
+    background-color: $white;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+
+    &::after {
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 10px 7px;
+      background-image: svg-load('../blocks/lang-switcher/bg-img/down-arrow-icon.svg', fill=$text-color);
+    }
+
+    &[aria-expanded=true] {
+
+      &::after {
+        transform: scale(1, -1);
+        background-image: svg-load('../blocks/lang-switcher/bg-img/down-arrow-icon.svg', fill=$link-color);
+      }
+    }
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $border-color;
+    }
+
+    #{$block-name}__item {
+      border: none;
+    }
+
+    &.active {
+
+      & > #{$block-name}__link,
+      & > #{$block-name}__header #{$block-name}__link {
+        color: $link-color;
+      }
+    }
   }
 
   &__link {
     display: block;
-    padding: 20px 40px;
-    font-size: 22px;
+    padding: 16px 0;
+    font-size: 16px; //22
     color: $text-color;
     text-decoration: none;
     user-select: none;
 
-    @media (min-width: $screen-md) {
-      padding: 20px 50px;
-    }
-
     &:hover,
     &:focus {
-      color: $white;
-      background-color: $link-color;
+      color: $link-color;
     }
 
     &:active {
-      background-color: $link-color--hover;
+      color: $link-color--hover;
+    }
+
+    #{$block-name}__link {
+      padding: 8px 0;
     }
   }
 
   &__contacts {
     padding: 0 40px;
-
-    @media (min-width: $screen-md) {
-      padding: 0 50px;
-    }
   }
 
   &__tel-list {
@@ -49,7 +113,7 @@
     display: inline-block;
     vertical-align: middle;
     padding: 5px 0;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     text-decoration: none;
     color: $text-color;
