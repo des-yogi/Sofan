@@ -1,6 +1,10 @@
 .page-header {
   padding: 10px 0;
 
+  @media (min-width: $screen-xl) {
+    padding: 0;
+  }
+
   $block-name:                &; // #{$block-name}__element
 
   .socials,
@@ -20,7 +24,7 @@
 
     @media (min-width: $screen-xl) {
       flex-wrap: nowrap;
-      align-items: flex-end;
+      //align-items: flex-end;
     }
   }
 
@@ -33,7 +37,7 @@
 
     @media (min-width: $screen-xl) {
       justify-content: space-between;
-      margin-left: 60px;
+      margin-left: 32px; //60
     }
   }
 
@@ -50,6 +54,7 @@
     }
 
     @media (min-width: $screen-xl) {
+      padding: 20px 0 15px;
       margin: 0;
     }
   }
@@ -79,7 +84,7 @@
 
     @media (min-width: $screen-xl) {
       //padding-left: 34px;
-      font-size: 18px;
+      //font-size: 18px;
       font-weight: 700;
     }
 

@@ -1,5 +1,4 @@
 <!--DEV
-
 @ @include('blocks/drawer/drawer.html')
 -->
 
@@ -13,15 +12,33 @@
       <button class="drawer__close" type="button" data-drawer-close aria-label="Закрыть моб. меню"></button>
     </div>
     <div class="drawer__content">
-      <nav class="mob-menu">
+      <nav id="mobMenu" class="mob-menu  accordion">
 
         <ul class="list-nostyled  mob-menu__list">
           <li class="mob-menu__item">
-            <a href="#" class="mob-menu__link">Про нас</a>
+            <span class="mob-menu__link">Кухни</span>
           </li>
-          <li class="mob-menu__item  active">
-            <a href="#" class="mob-menu__link">Каталог</a>
+
+          <li class="mob-menu__item active">
+            <div class="mob-menu__header" id="headingOne">
+              <a href="#" class="mob-menu__link">Кухонные модули</a>
+              <button class="mob-menu__btn  collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <span class="visually-hidden">Открыть подменю</span>
+              </button>
+            </div>
+            <ul id="collapseOne" class="list-nostyled  mob-menu__sublist  collapse" data-parent="#mobMenu" aria-labelledby="headingOne">
+              <li class="mob-menu__item">
+                <a href="#" class="mob-menu__link">Тумбы нижние</a>
+              </li>
+              <li class="mob-menu__item active">
+                <a href="#" class="mob-menu__link">Тумбы нижние-угловые</a>
+              </li>
+              <li class="mob-menu__item">
+                <a href="#" class="mob-menu__link">Шкафы верхние</a>
+              </li>
+            </ul>
           </li>
+
           <li class="mob-menu__item">
             <a href="#" class="mob-menu__link">Наші роботи</a>
           </li>
@@ -71,7 +88,7 @@
             </ul>
 
             <div class="dropdown  lang-switcher">
-              <button id="langSwitcher" class="lang-switcher__btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,8">
+              <button id="langSwitcherMob" class="lang-switcher__btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,8">
                 <span class="lang-switcher__current">EN</span>
               </button>
               <ul class="list-nostyled  dropdown-menu  dropdown-menu-right  lang-switcher__list" aria-labelledby="langSwitcher">

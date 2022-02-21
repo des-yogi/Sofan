@@ -1,0 +1,31 @@
+.payment-logos {
+  margin-top: 20px;
+  font-size: 14px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__cap {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__item {
+    margin-bottom: 8px;
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      display: block;
+      height: 24px;
+    }
+  }
+}

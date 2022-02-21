@@ -316,7 +316,7 @@ ul {
 
   li {
     position: relative;
-    padding-left: 26px;
+    padding-left: 24px;
 
     &::before {
       display: block;
@@ -334,7 +334,7 @@ ul {
       }
     }
 
-    ul li::before {
+    & > ul li::before {
       border-radius: 0;
     }
   }
